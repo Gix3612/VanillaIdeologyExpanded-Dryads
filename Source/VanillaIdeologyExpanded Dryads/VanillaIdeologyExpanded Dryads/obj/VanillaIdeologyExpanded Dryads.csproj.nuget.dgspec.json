@@ -34,13 +34,9 @@
       "frameworks": {
         "net472": {
           "dependencies": {
-            "Krafs.Rimworld.Ref": {
-              "target": "Package",
-              "version": "[1.3.3200, )"
-            },
             "Lib.Harmony": {
               "target": "Package",
-              "version": "[2.2.0, )"
+              "version": "[2.2.2, )"
             }
           }
         }

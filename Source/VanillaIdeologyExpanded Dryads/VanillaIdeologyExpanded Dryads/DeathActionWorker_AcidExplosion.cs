@@ -15,7 +15,7 @@ namespace VanillaIdeologyExpanded_Dryads
 
 
 
-            GenExplosion.DoExplosion(corpse.Position, corpse.Map, 2.9f, InternalDefOf.VDE_AcidSpit, corpse.InnerPawn, 10, -1, InternalDefOf.VDE_GooPop, null, null, null, ThingDefOf.Filth_Slime, 1f, 1, false, null, 0f, 1);
+            GenExplosion.DoExplosion(corpse.Position, corpse.Map, 2.9f, InternalDefOf.VDE_AcidSpit, corpse.InnerPawn, 10, -1, InternalDefOf.VDE_GooPop, null, null, null, ThingDefOf.Filth_Slime, 1f, 1, null,false, null, 0f, 1);
         }
 
 
