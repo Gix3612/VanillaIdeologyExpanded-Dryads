@@ -35,8 +35,8 @@
 		<subSounds>
 			<li>
 				<grains>
-					<li Class="AudioGrain_Folder">
-						<clipFolderPath>VDE_GooPop</clipFolderPath>
+					<li Class="AudioGrain_Clip">
+						<clipPath>VDE_GooPop</clipPath>
 					</li>
 				</grains>
 
