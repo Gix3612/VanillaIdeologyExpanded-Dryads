@@ -13,5 +13,4 @@ C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\15VanillaIdeologyExp
 E:\Steam\steamapps\common\RimWorld\Mods\VanillaIdeologyExpanded-Dryads\1.5\Assemblies\VanillaIdeologyExpandedDryads.dll
 E:\Steam\steamapps\common\RimWorld\Mods\VanillaIdeologyExpanded-Dryads\1.5\Source\VanillaIdeologyExpanded Dryads\VanillaIdeologyExpanded Dryads\obj\Debug\VanillaIdeologyExpanded Dryads.csproj.AssemblyReference.cache
 E:\Steam\steamapps\common\RimWorld\Mods\VanillaIdeologyExpanded-Dryads\1.5\Source\VanillaIdeologyExpanded Dryads\VanillaIdeologyExpanded Dryads\obj\Debug\VanillaIdeologyExpanded Dryads.csproj.CoreCompileInputs.cache
-E:\Steam\steamapps\common\RimWorld\Mods\VanillaIdeologyExpanded-Dryads\1.5\Source\VanillaIdeologyExpanded Dryads\VanillaIdeologyExpanded Dryads\obj\Debug\VanillaIdeologyExpanded Dryads.csproj.CopyComplete
 E:\Steam\steamapps\common\RimWorld\Mods\VanillaIdeologyExpanded-Dryads\1.5\Source\VanillaIdeologyExpanded Dryads\VanillaIdeologyExpanded Dryads\obj\Debug\VanillaIdeologyExpandedDryads.dll
