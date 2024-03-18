@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "M0oBL7iP1vnOahUv6BrAgcN6RuWvZrlc/ZGWvMRAbQAnV2yGTxwQlZMrFbNg04SaGzZncpEryPgYa/nq7shVAw==",
+  "success": true,
+  "projectFilePath": "E:\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaIdeologyExpanded-Dryads\\1.5\\Source\\VanillaIdeologyExpanded Dryads\\VanillaIdeologyExpanded Dryads\\VanillaIdeologyExpanded Dryads.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\lib.harmony\\2.3.1.1\\lib.harmony.2.3.1.1.nupkg.sha512"
+  ],
+  "logs": []
+}
