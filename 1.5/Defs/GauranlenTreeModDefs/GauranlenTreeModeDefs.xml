@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+
+	<!-- Stonedigger -->
+
 	<GauranlenTreeModeDef>
 		<defName>VDE_Stonedigger</defName>
 		<label>stonedigger</label>
@@ -14,6 +17,9 @@
 			<ThingDef>VDE_Dryad_Stonedigger</ThingDef>
 		</hyperlinks>
 	</GauranlenTreeModeDef>
+
+	<!-- Spitter -->
+
 	<GauranlenTreeModeDef>
 		<defName>VDE_Spitter</defName>
 		<label>spitter</label>
@@ -30,6 +36,9 @@
 			<ThingDef>VDE_Dryad_Spitter</ThingDef>
 		</hyperlinks>
 	</GauranlenTreeModeDef>
+
+	<!-- Gaubricmaker -->
+
 	<GauranlenTreeModeDef>
 		<defName>VDE_Gaubricmaker</defName>
 		<label>gaubricmaker</label>
@@ -44,6 +53,9 @@
 			<ThingDef>VDE_Dryad_Gaubricmaker</ThingDef>
 		</hyperlinks>
 	</GauranlenTreeModeDef>
+
+	<!-- Nectarmaker -->
+
 	<GauranlenTreeModeDef>
 		<defName>VDE_Nectarmaker</defName>
 		<label>nectarmaker</label>
@@ -58,4 +70,5 @@
 			<ThingDef>VDE_Dryad_Nectarmaker</ThingDef>
 		</hyperlinks>
 	</GauranlenTreeModeDef>
+
 </Defs>

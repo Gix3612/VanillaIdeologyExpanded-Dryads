@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+
 	<!-- Stonedigger -->
+
 	<ThingDef ParentName="DryadBase">
 		<defName>VDE_Dryad_Stonedigger</defName>
 		<label>stonedigger dryad</label>
@@ -52,6 +54,7 @@
 			</untrainableTags>
 		</race>
 	</ThingDef>
+
 	<PawnKindDef ParentName="DryadKindBase">
 		<defName>VDE_Dryad_Stonedigger</defName>
 		<label>stonedigger dryad</label>
@@ -69,7 +72,9 @@
 			</li>
 		</lifeStages>
 	</PawnKindDef>
+
 	<!-- Spitter -->
+
 	<ThingDef ParentName="DryadBase">
 		<defName>VDE_Dryad_Spitter</defName>
 		<label>spitter dryad</label>
@@ -127,6 +132,7 @@
 			</untrainableTags>
 		</race>
 	</ThingDef>
+
 	<PawnKindDef ParentName="DryadKindBase">
 		<defName>VDE_Dryad_Spitter</defName>
 		<label>spitter dryad</label>
@@ -144,7 +150,9 @@
 			</li>
 		</lifeStages>
 	</PawnKindDef>
+
 	<!-- Gaubricmaker -->
+
 	<ThingDef ParentName="DryadBase">
 		<defName>VDE_Dryad_Gaubricmaker</defName>
 		<label>gaubricmaker dryad</label>
@@ -189,6 +197,7 @@
 			</untrainableTags>
 		</race>
 	</ThingDef>
+
 	<PawnKindDef ParentName="DryadKindBase">
 		<defName>VDE_Dryad_Gaubricmaker</defName>
 		<label>gaubricmaker dryad</label>
@@ -206,7 +215,9 @@
 			</li>
 		</lifeStages>
 	</PawnKindDef>
+
 	<!-- Nectarmaker -->
+
 	<ThingDef ParentName="DryadBase">
 		<defName>VDE_Dryad_Nectarmaker</defName>
 		<label>nectarmaker dryad</label>
@@ -252,6 +263,7 @@
 			</untrainableTags>
 		</race>
 	</ThingDef>
+
 	<PawnKindDef ParentName="DryadKindBase">
 		<defName>VDE_Dryad_Nectarmaker</defName>
 		<label>nectarmaker dryad</label>
@@ -269,4 +281,5 @@
 			</li>
 		</lifeStages>
 	</PawnKindDef>
+
 </Defs>
