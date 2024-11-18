@@ -6,7 +6,7 @@
 	<ThingDef ParentName="DryadBase">
 		<defName>VDE_Dryad_Stonedigger</defName>
 		<label>stonedigger dryad</label>
-		<description>An extremely easy-going caste of dryad which specializes in finding stone chunks. Absorbs minerals from the ground that help harden its carapace while leaving excessively large pieces aside.\n\nIn general, dryads are mammal-like creatures that have a symbiotic relationship with the Gauranlen tree. They reproduce together with their tree, which contains a hidden dryad queen. Dryads can morph into various specialized castes.</description>
+		<description>An extremely easy-going caste of dryad which specializes in finding stone chunks. Absorbs minerals from the ground that help harden its carapace while leaving excessively large pieces aside. However, it is slow and ineffective at work or combat.\n\nIn general, dryads are mammal-like creatures that have a symbiotic relationship with the Gauranlen tree. They reproduce together with their tree, which contains a hidden dryad queen. Dryads can morph into various specialized castes.</description>
 		<statBases>
 			<MoveSpeed>2.24</MoveSpeed>
 			<ArmorRating_Blunt>0.75</ArmorRating_Blunt>
@@ -43,15 +43,6 @@
 			</lifeStageAges>
 			<baseBodySize>0.667</baseBodySize>
 			<baseHealthScale>0.8</baseHealthScale>
-			<trainability>Intermediate</trainability>
-			<trainableTags>
-				<li>Basic</li>
-				<li>Combat</li>
-			</trainableTags>
-			<untrainableTags>
-				<li>Work</li>
-				<li>Help</li>
-			</untrainableTags>
 		</race>
 	</ThingDef>
 
@@ -131,6 +122,36 @@
 				<li>Help</li>
 			</untrainableTags>
 		</race>
+    <tools Inherit="False">
+      <li>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>0.9</chanceFactor>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>14</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>4</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
 	</ThingDef>
 
 	<PawnKindDef ParentName="DryadKindBase">
@@ -186,15 +207,6 @@
 			</lifeStageAges>
 			<baseBodySize>0.667</baseBodySize>
 			<baseHealthScale>0.6</baseHealthScale>
-			<trainability>Intermediate</trainability>
-			<trainableTags>
-				<li>Basic</li>
-				<li>Combat</li>
-			</trainableTags>
-			<untrainableTags>
-				<li>Work</li>
-				<li>Help</li>
-			</untrainableTags>
 		</race>
 	</ThingDef>
 
@@ -221,7 +233,7 @@
 	<ThingDef ParentName="DryadBase">
 		<defName>VDE_Dryad_Nectarmaker</defName>
 		<label>nectarmaker dryad</label>
-		<description>A curious dryad caste specialized in ambrosia production. Together with its Gauranlen tree, this dryad can generate invigorating ambrosia on an ongoing basis. However, it is completely defenseless and requires careful attention against threats.\n\nIn general, dryads are mammal-like creatures that have a symbiotic relationship with the Gauranlen tree. They reproduce together with their tree, which contains a hidden dryad queen. Dryads can morph into various specialized castes.</description>
+		<description>A curious dryad caste specialized in ambrosia production. Together with its Gauranlen tree, this dryad can generate invigorating ambrosia on an ongoing basis. However, it is slow and ineffective at work or combat.\n\nIn general, dryads are mammal-like creatures that have a symbiotic relationship with the Gauranlen tree. They reproduce together with their tree, which contains a hidden dryad queen. Dryads can morph into various specialized castes.</description>
 		<statBases>
 			<MoveSpeed>2</MoveSpeed>
 		</statBases>
@@ -252,15 +264,6 @@
 			</lifeStageAges>
 			<baseBodySize>0.667</baseBodySize>
 			<baseHealthScale>0.8</baseHealthScale>
-			<trainability>Intermediate</trainability>
-			<trainableTags>
-				<li>Basic</li>
-				<li>Combat</li>
-			</trainableTags>
-			<untrainableTags>
-				<li>Work</li>
-				<li>Help</li>
-			</untrainableTags>
 		</race>
 	</ThingDef>
 
