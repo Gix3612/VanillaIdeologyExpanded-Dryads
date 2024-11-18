@@ -189,6 +189,40 @@
 		</comps>
 	</ThingDef>
 
+	<!-- Agavemaker -->
+
+	<ThingDef>
+		<defName>VDE_AgavemakerAwakeningCocoon</defName>
+		<label>agavemaker awakening pod</label>
+		<description>An awakened dryad will emerge from this pod in one day.</description>
+		<graphicData>
+			<texPath>Things/Building/UpgradeAgavemaker</texPath>
+		</graphicData>
+		<comps>
+			<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_SpawnAwakened">
+				<ticksToSpawn>60000</ticksToSpawn>
+				<dryadToSpawn>VDE_AwakenedDryad_Agavemaker</dryadToSpawn>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<!-- Voltaic -->
+
+	<ThingDef>
+		<defName>VDE_VoltaicAwakeningCocoon</defName>
+		<label>voltaic awakening pod</label>
+		<description>An awakened dryad will emerge from this pod in one day.</description>
+		<graphicData>
+			<texPath>Things/Building/UpgradeVoltaic</texPath>
+		</graphicData>
+		<comps>
+			<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_SpawnAwakened">
+				<ticksToSpawn>60000</ticksToSpawn>
+				<dryadToSpawn>VDE_AwakenedDryad_Voltaic</dryadToSpawn>
+			</li>
+		</comps>
+	</ThingDef>
+
 	<!-- Dryad Nest -->
 
 	<ThingDef ParentName="AnimalBedFurnitureBase">

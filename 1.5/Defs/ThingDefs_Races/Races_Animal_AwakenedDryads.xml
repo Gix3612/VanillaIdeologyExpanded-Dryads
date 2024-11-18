@@ -699,4 +699,249 @@
 		</lifeStages>
 	</PawnKindDef>
 
+	<!-- Awakened Agavemaker -->
+
+	<ThingDef ParentName="AwakenedDryadBase">
+		<defName>VDE_AwakenedDryad_Agavemaker</defName>
+		<label>awakened agavemaker dryad</label>
+		<description>A dryad caste specialized in food production. Its awakening has accelerated the agave production and instills an instinct to bury parts of its peeling hide that are entirely similar to regular agave plants.\n\nAwakened dryads have both advantages and disadvantages compared to their bound relatives. While more proficient, specialized and unshackled, they can neither morph nor receive nourishment from a queen, resulting in a very limited lifespan.</description>
+		<statBases>
+			<MoveSpeed>3.2</MoveSpeed>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Spawner">
+				<thingToSpawn>RawAgave</thingToSpawn>
+				<spawnCount>40</spawnCount>
+				<spawnIntervalRange>60000</spawnIntervalRange>
+				<writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
+				<showMessageIfOwned>true</showMessageIfOwned>
+			</li>
+			<li Class="AnimalBehaviours.CompProperties_BuildPeriodically">
+				<defOfBuilding>Plant_Agave</defOfBuilding>
+				<ticksToBuild>60000</ticksToBuild>
+				<maxBuildingsPerMap>50</maxBuildingsPerMap>
+				<acceptedTerrains>
+					<li>Soil</li>
+					<li>MossyTerrain</li>
+					<li>MarshyTerrain</li>
+					<li>SoilRich</li>
+					<li>Gravel</li>
+					<li>AB_DenseMud</li>
+					<li>AB_DenseGrass</li>
+					<li>AB_WebbedMarshyTerrain</li>
+					<li>AB_ForsakenSand</li>
+					<li>AB_ForsakenRock</li>
+					<li>AB_CrackedMud</li>
+					<li>AB_RichCrackedMud</li>
+					<li>AB_SlimeGrass</li>
+					<li>AB_MycoticSoil</li>
+					<li>AB_MycoticSoilRich</li>
+					<li>AB_MycoticGrass</li>
+					<li>GU_AlienSand</li>
+					<li>GU_RichAlienSand</li>
+					<li>AB_SnowOverRocks</li>
+					<li>AB_HardenedGrass</li>
+					<li>AB_HardenedGrassFertile</li>
+					<li>AB_LushGrass</li>
+					<li>AB_ParchedEarth</li>
+				</acceptedTerrains>
+			</li>
+		</comps>
+		<race>
+			<baseBodySize>1.1</baseBodySize>
+			<baseHealthScale>0.8</baseHealthScale>
+			<lifeStageAges>
+				<li>
+					<soundWounded>Pawn_Dryad_Medicinemaker_Wounded</soundWounded>
+					<soundCall>Pawn_Dryad_Medicinemaker_Call</soundCall>
+				</li>
+			</lifeStageAges>
+		</race>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AwakenedDryadKindBase">
+		<defName>VDE_AwakenedDryad_Agavemaker</defName>
+		<label>awakened agavemaker dryad</label>
+		<race>VDE_AwakenedDryad_Agavemaker</race>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/DryadAwakenedBerrymaker/DryadAwakenedBerrymaker</texPath>
+					<!-- <texPath>Things/Pawn/Animal/DryadAwakenedAgavemaker/DryadAwakenedAgavemaker</texPath> -->
+					<drawSize>2.5</drawSize>
+					<shadowData>
+						<volume>(0.8, 0.6, 0.6)</volume>
+						<offset>(0,0,-0.3)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/DryadAwakenedBerrymaker/Dessicated_DryadAwakenedBerrymaker</texPath>
+					<!-- <texPath>Things/Pawn/Animal/DryadAwakenedAgavemaker/Dessicated_DryadAwakenedAgavemaker</texPath> -->
+					<drawSize>2.5</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+	<!-- Awakened Voltaic -->
+
+	<ThingDef ParentName="AwakenedDryadBase">
+		<defName>VDE_AwakenedDryad_Voltaic</defName>
+		<label>awakened voltaic dryad</label>
+		<description>A dryad caste that naturally generates electricity. Its awakening has <!-- can charge batteries and its attacks cause electromagnetic disruptions -->.\n\nAwakened dryads have both advantages and disadvantages compared to their bound relatives. While more proficient, specialized and unshackled, they can neither morph nor receive nourishment from a queen, resulting in a very limited lifespan.</description>
+		<statBases>
+			<MoveSpeed>3.2</MoveSpeed>
+		</statBases>
+    <tools Inherit="False">
+      <li>
+        <label>left claw</label>
+        <labelNoLocation>claw</labelNoLocation>
+        <capacities>
+          <li>Scratch</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>14</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <extraMeleeDamages>
+          <li>
+            <def>EMP</def>
+            <amount>9</amount>
+          </li>
+        </extraMeleeDamages>
+      </li>
+      <li>
+        <label>right claw</label>
+        <labelNoLocation>claw</labelNoLocation>
+        <capacities>
+          <li>Scratch</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>14</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <extraMeleeDamages>
+          <li>
+            <def>EMP</def>
+            <amount>9</amount>
+          </li>
+        </extraMeleeDamages>
+      </li>
+      <li>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>0.9</chanceFactor>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>14</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <extraMeleeDamages>
+          <li>
+            <def>EMP</def>
+            <amount>9</amount>
+          </li>
+        </extraMeleeDamages>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>4</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+		<comps>
+			<li Class="AnimalBehaviours.CompProperties_Electrified">
+				<electroRate>80</electroRate>
+				<electroRadius>5</electroRadius>
+				<batteriesToAffect>
+					<li>Battery</li>
+					<li>Battery_Silver</li>
+					<li>Battery_Gold</li>
+					<li>Battery_Plasteel</li>
+					<li>Battery_Uranium</li>
+					<li>Battery_Advanced</li>
+					<li>Battery_Vanometric</li>
+					<li>Battery4k</li>
+					<li>Battery16k</li>
+					<li>Battery64k</li>
+					<li>Battery256k</li>
+					<li>ChargeBack_Battery_Prototype</li>
+					<li>ChargeBack_Battery</li>
+					<li>SpeedCharge_Battery</li>
+					<li>ResonanceCell_Battery</li>
+					<li>VoidCell_Battery</li>
+					<li>VFE_LargeBattery</li>
+					<li>VFE_SmallBattery</li>
+					<li>VFE_AdvancedBattery</li>
+					<li>VFE_LargeAdvancedBattery</li>
+					<li>AA_BlueGelBattery</li>
+					<li>AA_HexaGelBattery</li>
+					<li>ShipCapacitor</li>
+					<li>ShipCapacitorSmall</li>
+				</batteriesToAffect>			
+			</li>
+		</comps>
+		<race>
+			<baseBodySize>1.1</baseBodySize>
+			<baseHealthScale>0.8</baseHealthScale>
+			<lifeStageAges>
+				<li>
+					<soundWounded>Pawn_Dryad_Medicinemaker_Wounded</soundWounded>
+					<soundCall>Pawn_Dryad_Medicinemaker_Call</soundCall>
+				</li>
+			</lifeStageAges>
+		</race>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AwakenedDryadKindBase">
+		<defName>VDE_AwakenedDryad_Voltaic</defName>
+		<label>awakened voltaic dryad</label>
+		<race>VDE_AwakenedDryad_Voltaic</race>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/DryadAwakenedBerrymaker/DryadAwakenedBerrymaker</texPath>
+					<!-- <texPath>Things/Pawn/Animal/DryadAwakenedVoltaic/DryadAwakenedVoltaic</texPath> -->
+					<drawSize>2.5</drawSize>
+					<shadowData>
+						<volume>(0.8, 0.6, 0.6)</volume>
+						<offset>(0,0,-0.3)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/DryadAwakenedBerrymaker/Dessicated_DryadAwakenedBerrymaker</texPath>
+					<!-- <texPath>Things/Pawn/Animal/DryadAwakenedVoltaic/Dessicated_DryadAwakenedVoltaic</texPath> -->
+					<drawSize>2.5</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
 </Defs>
