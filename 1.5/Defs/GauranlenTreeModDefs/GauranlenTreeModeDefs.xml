@@ -77,7 +77,7 @@
     <defName>VDE_Agavemaker</defName>
     <label>agavemaker dryad</label>
     <description>A dryad caste specialized in food production. Together with its Gauranlen tree, this dryad can generate nourishing agave on an ongoing basis. However, it is slow and ineffective at work or combat.</description>
-    <drawPosition>(0, 0.833)</drawPosition>
+    <drawPosition>(0.833, 0.666)</drawPosition>
     <pawnKindDef>VDE_Dryad_Agavemaker</pawnKindDef>
     <displayedStats>
       <li>MaxHitPoints</li>
@@ -95,7 +95,7 @@
     <defName>VDE_Dryad_Voltaic</defName>
     <label>voltaic dryad</label>
     <description>A dryad caste that naturally generates electricity. Together with its Gauranlen tree, this dryad can charge batteries and its attacks cause electromagnetic disruptions.</description>
-    <drawPosition>(0, 0.833)</drawPosition>
+    <drawPosition>(0.833, 0.833)</drawPosition>
     <pawnKindDef>VDE_Dryad_Voltaic</pawnKindDef>
     <displayedStats>
       <li>MaxHitPoints</li>

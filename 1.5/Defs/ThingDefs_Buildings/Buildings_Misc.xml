@@ -196,8 +196,7 @@
 		<label>agavemaker awakening pod</label>
 		<description>An awakened dryad will emerge from this pod in one day.</description>
 		<graphicData>
-			<texPath>Things/Building/UpgradeCarrier</texPath>
-			<!-- <texPath>Things/Building/UpgradeAgavemaker</texPath> -->
+			<texPath>Things/Building/UpgradeAgavemaker</texPath>
 		</graphicData>
 		<comps>
 			<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_SpawnAwakened">
@@ -214,8 +213,7 @@
 		<label>voltaic awakening pod</label>
 		<description>An awakened dryad will emerge from this pod in one day.</description>
 		<graphicData>
-			<texPath>Things/Building/UpgradeCarrier</texPath>
-			<!-- <texPath>Things/Building/UpgradeVoltaic</texPath> -->
+			<texPath>Things/Building/UpgradeVoltaic</texPath>
 		</graphicData>
 		<comps>
 			<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_SpawnAwakened">

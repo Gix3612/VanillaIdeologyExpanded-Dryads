@@ -100,12 +100,13 @@
 			</li>
 		</comps>
 		<race>
+      <body>Snake</body>
 			<useMeatFrom>Dryad_Basic</useMeatFrom>
 			<lifeStageAges>
 				<li>
 					<def>AnimalAdult</def>
-					<soundWounded>Pawn_Dryad_Barkskin_Wounded</soundWounded>
-					<soundCall>Pawn_Dryad_Barkskin_Call</soundCall>
+          <soundWounded>Pawn_Dryad_Clawer_Wounded</soundWounded>
+          <soundCall>Pawn_Dryad_Clawer_Call</soundCall>
 				</li>
 			</lifeStageAges>
 			<baseHealthScale>0.6</baseHealthScale>
@@ -121,13 +122,13 @@
 		</race>
     <tools Inherit="False">
       <li>
+        <label>venom-fangs</label>
         <capacities>
-          <li>Bite</li>
+          <li>ToxicBite</li>
         </capacities>
         <power>9</power>
         <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
-        <chanceFactor>0.9</chanceFactor>
+        <linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
         <surpriseAttack>
           <extraMeleeDamages>
             <li>
@@ -198,8 +199,8 @@
 			<lifeStageAges>
 				<li>
 					<def>AnimalAdult</def>
-					<soundWounded>Pawn_Dryad_Barkskin_Wounded</soundWounded>
-					<soundCall>Pawn_Dryad_Barkskin_Call</soundCall>
+          <soundWounded>Pawn_Dryad_Gaumaker_Wounded</soundWounded>
+          <soundCall>Pawn_Dryad_Gaumaker_Call</soundCall>
 				</li>
 			</lifeStageAges>
 			<baseHealthScale>0.6</baseHealthScale>
@@ -254,8 +255,8 @@
 			<lifeStageAges>
 				<li>
 					<def>AnimalAdult</def>
-					<soundWounded>Pawn_Dryad_Barkskin_Wounded</soundWounded>
-					<soundCall>Pawn_Dryad_Barkskin_Call</soundCall>
+          <soundWounded>Pawn_Dryad_Wounded</soundWounded>
+          <soundCall>Pawn_Dryad_Call</soundCall>
 				</li>
 			</lifeStageAges>
 		</race>
@@ -313,9 +314,7 @@
         <li>
           <def>AnimalAdult</def>
           <soundWounded>Pawn_Dryad_Berrymaker_Wounded</soundWounded>
-          <!-- <soundWounded>Pawn_Dryad_Agavemaker_Wounded</soundWounded> -->
           <soundCall>Pawn_Dryad_Berrymaker_Call</soundCall>
-          <!-- <soundCall>Pawn_Dryad_Agavemaker_Call</soundCall> -->
         </li>
       </lifeStageAges>
       <headPosPerRotation>
@@ -334,13 +333,11 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Dryad_Berrymaker/DryadBerrymaker</texPath>
-          <!-- <texPath>Things/Pawn/Animal/Dryad_Agavemaker/DryadAgavemaker</texPath> -->
+          <texPath>Things/Pawn/Animal/DryadAgavemaker/DryadAgavemaker</texPath>
           <drawSize>1.5</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/Dryad_Berrymaker/Dessicated_DryadBerrymaker</texPath>
-          <!-- <texPath>Things/Pawn/Animal/Dryad_Agavemaker/Dessicated_DryadAgavemaker</texPath> -->
+          <texPath>Things/Pawn/Animal/DryadAgavemaker/Dessicated_DryadAgavemaker</texPath>
           <drawSize>1.5</drawSize>
         </dessicatedBodyGraphicData>
       </li>
@@ -361,12 +358,19 @@
       <lifeStageAges>
         <li>
           <def>AnimalAdult</def>
-          <soundWounded>Pawn_Dryad_Berrymaker_Wounded</soundWounded>
-          <!-- <soundWounded>Pawn_Dryad_Voltaic_Wounded</soundWounded> -->
-          <soundCall>Pawn_Dryad_Berrymaker_Call</soundCall>
-          <!-- <soundCall>Pawn_Dryad_Voltaic_Call</soundCall> -->
+					<soundWounded>Pawn_Dryad_Barkskin_Wounded</soundWounded>
+					<soundCall>Pawn_Dryad_Barkskin_Call</soundCall>
         </li>
       </lifeStageAges>
+			<trainability>Intermediate</trainability>
+			<trainableTags>
+				<li>Basic</li>
+				<li>Combat</li>
+			</trainableTags>
+			<untrainableTags>
+				<li>Work</li>
+				<li>Help</li>
+			</untrainableTags>
       <headPosPerRotation>
         <li>(0.0, 0, 0.1)</li>
         <li>(0.15, 0, 0.02)</li>
@@ -506,13 +510,11 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/Dryad_Berrymaker/DryadBerrymaker</texPath>
-          <!-- <texPath>Things/Pawn/Animal/Dryad_Voltaic/DryadVoltaic</texPath> -->
+          <texPath>Things/Pawn/Animal/DryadVoltaic/DryadVoltaic</texPath>
           <drawSize>1.5</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/Dryad_Berrymaker/Dessicated_DryadBerrymaker</texPath>
-          <!-- <texPath>Things/Pawn/Animal/Dryad_Voltaic/Dessicated_DryadVoltaic</texPath> -->
+          <texPath>Things/Pawn/Animal/DryadVoltaic/Dessicated_DryadVoltaic</texPath>
           <drawSize>1.5</drawSize>
         </dessicatedBodyGraphicData>
       </li>
