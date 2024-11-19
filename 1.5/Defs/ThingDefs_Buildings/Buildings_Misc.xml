@@ -191,12 +191,13 @@
 
 	<!-- Agavemaker -->
 
-	<ThingDef>
+	<ThingDef ParentName="VDE_DryadCocoon">
 		<defName>VDE_AgavemakerAwakeningCocoon</defName>
 		<label>agavemaker awakening pod</label>
 		<description>An awakened dryad will emerge from this pod in one day.</description>
 		<graphicData>
-			<texPath>Things/Building/UpgradeAgavemaker</texPath>
+			<texPath>Things/Building/UpgradeCarrier</texPath>
+			<!-- <texPath>Things/Building/UpgradeAgavemaker</texPath> -->
 		</graphicData>
 		<comps>
 			<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_SpawnAwakened">
@@ -208,12 +209,13 @@
 
 	<!-- Voltaic -->
 
-	<ThingDef>
+	<ThingDef ParentName="VDE_DryadCocoon">
 		<defName>VDE_VoltaicAwakeningCocoon</defName>
 		<label>voltaic awakening pod</label>
 		<description>An awakened dryad will emerge from this pod in one day.</description>
 		<graphicData>
-			<texPath>Things/Building/UpgradeVoltaic</texPath>
+			<texPath>Things/Building/UpgradeCarrier</texPath>
+			<!-- <texPath>Things/Building/UpgradeVoltaic</texPath> -->
 		</graphicData>
 		<comps>
 			<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_SpawnAwakened">
@@ -252,14 +254,13 @@
 			<ImmunityGainSpeedFactor>1.07</ImmunityGainSpeedFactor>
 			<SurgerySuccessChanceFactor>1</SurgerySuccessChanceFactor>
 		</statBases>
-		<comps>
+		<comps Inherit="False">
 			<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_NotifyDestruction" />
-      <compClass Inherit="False" />
+			<li Class="CompProperties_AssignableToPawn">
+        <drawAssignmentOverlay>false</drawAssignmentOverlay>
+        <compClass>CompAssignableToPawn_Bed</compClass>
+      </li>
 		</comps>
-		<minifiedDef>MinifiedThing</minifiedDef>
-		<thingCategories>
-			<li>BuildingsFurniture</li>
-		</thingCategories>
 	</ThingDef>
 
 </Defs>

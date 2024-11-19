@@ -3,33 +3,25 @@
 
 	<!-- Awakened Base -->
 
-  <ThingDef ParentName="DryadBase" Name="AwakenedDryadBase" Abstract="True">
+	<ThingDef ParentName="DryadBase" Name="AwakenedDryadBase" Abstract="True">
 		<statBases>
 			<MarketValue>300</MarketValue>
 			<FilthRate>1</FilthRate>
 		</statBases>
-    <descriptionHyperlinks Inherit="False"/>
+		<descriptionHyperlinks Inherit="False"/>
 		<tradeTags Inherit="False">
 			<li>VDE_Dryad</li>
 		</tradeTags>
 		<race>
 			<herdAnimal>true</herdAnimal>
-      <allowedOnCaravan>true</allowedOnCaravan>
-      <disableAreaControl>false</disableAreaControl>
-      <thinkTreeMain/>
+			<allowedOnCaravan>true</allowedOnCaravan>
+			<disableAreaControl>false</disableAreaControl>
+			<thinkTreeMain/>
 			<lifeExpectancy>2</lifeExpectancy>
 			<baseBodySize>1.4</baseBodySize>
 			<baseHealthScale>1.4</baseHealthScale>
 			<useMeatFrom>Dryad_Basic</useMeatFrom>
 			<mateMtbHours>100000</mateMtbHours>
-			<lifeStageAges>
-				<li>
-					<def>AnimalAdult</def>
-					<minAge>0</minAge>
-					<soundWounded>Pawn_Dryad_Barkskin_Wounded</soundWounded>
-					<soundCall>Pawn_Dryad_Barkskin_Call</soundCall>
-				</li>
-			</lifeStageAges>
 			<baseHungerRate>0.001</baseHungerRate>
 			<foodType>OmnivoreRoughAnimal</foodType>
 			<soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
@@ -67,6 +59,8 @@
 			<packAnimal>true</packAnimal>
 			<lifeStageAges>
 				<li>
+					<def>AnimalAdult</def>
+					<minAge>0</minAge>
 					<soundWounded>Pawn_Dryad_Wounded</soundWounded>
 					<soundCall>Pawn_Dryad_Call</soundCall>
 				</li>
@@ -117,6 +111,8 @@
 			<trainability>Intermediate</trainability>
 			<lifeStageAges>
 				<li>
+					<def>AnimalAdult</def>
+					<minAge>0</minAge>
 					<soundWounded>Pawn_Dryad_Clawer_Wounded</soundWounded>
 					<soundCall>Pawn_Dryad_Clawer_Call</soundCall>
 				</li>
@@ -235,6 +231,14 @@
 		<race>
 			<baseHealthScale>2.2</baseHealthScale>
 			<trainability>Intermediate</trainability>
+			<lifeStageAges>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0</minAge>
+					<soundWounded>Pawn_Dryad_Barkskin_Wounded</soundWounded>
+					<soundCall>Pawn_Dryad_Barkskin_Call</soundCall>
+				</li>
+			</lifeStageAges>
 		</race>
 	</ThingDef>
 
@@ -286,6 +290,14 @@
 		</comps>
 		<race>
 			<baseBodySize>2.2</baseBodySize>
+			<lifeStageAges>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0</minAge>
+					<soundWounded>Pawn_Dryad_Barkskin_Wounded</soundWounded>
+					<soundCall>Pawn_Dryad_Barkskin_Call</soundCall>
+				</li>
+			</lifeStageAges>
 		</race>
 	</ThingDef>
 
@@ -340,6 +352,8 @@
 			<baseHealthScale>0.8</baseHealthScale>
 			<lifeStageAges>
 				<li>
+					<def>AnimalAdult</def>
+					<minAge>0</minAge>
 					<soundWounded>Pawn_Dryad_Medicinemaker_Wounded</soundWounded>
 					<soundCall>Pawn_Dryad_Medicinemaker_Call</soundCall>
 				</li>
@@ -422,6 +436,8 @@
 			<baseHealthScale>0.8</baseHealthScale>
 			<lifeStageAges>
 				<li>
+					<def>AnimalAdult</def>
+					<minAge>0</minAge>
 					<soundWounded>Pawn_Dryad_Medicinemaker_Wounded</soundWounded>
 					<soundCall>Pawn_Dryad_Medicinemaker_Call</soundCall>
 				</li>
@@ -462,11 +478,11 @@
 		</statBases>
 		<comps>
 			<li Class="AnimalBehaviours.CompProperties_DigPeriodically">
-				<customThingToDig>			
-					
+				<customThingToDig>
+
 				</customThingToDig>
-				<customAmountToDig>				
-					
+				<customAmountToDig>
+
 				</customAmountToDig>
 				<ticksToDig>60000</ticksToDig>
 				<onlyWhenTamed>true</onlyWhenTamed>
@@ -478,6 +494,14 @@
 		<race>
 			<baseBodySize>2.2</baseBodySize>
 			<baseHealthScale>1.2</baseHealthScale>
+			<lifeStageAges>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0</minAge>
+					<soundWounded>Pawn_Dryad_Barkskin_Wounded</soundWounded>
+					<soundCall>Pawn_Dryad_Barkskin_Call</soundCall>
+				</li>
+			</lifeStageAges>
 		</race>
 	</ThingDef>
 
@@ -531,6 +555,14 @@
 		<race>
 			<baseBodySize>1.2</baseBodySize>
 			<baseHealthScale>1.2</baseHealthScale>
+			<lifeStageAges>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0</minAge>
+					<soundWounded>Pawn_Dryad_Barkskin_Wounded</soundWounded>
+					<soundCall>Pawn_Dryad_Barkskin_Call</soundCall>
+				</li>
+			</lifeStageAges>
 		</race>
 	</ThingDef>
 
@@ -596,37 +628,45 @@
 			<executionRange>3</executionRange>
 			<baseBodySize>1.6</baseBodySize>
 			<trainability>Advanced</trainability>
+			<lifeStageAges>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0</minAge>
+					<soundWounded>Pawn_Dryad_Barkskin_Wounded</soundWounded>
+					<soundCall>Pawn_Dryad_Barkskin_Call</soundCall>
+				</li>
+			</lifeStageAges>
 		</race>
 		<tools Inherit="False">
-      <li>
-        <capacities>
-          <li>Bite</li>
-        </capacities>
-        <power>9</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
-        <chanceFactor>0.9</chanceFactor>
-        <surpriseAttack>
-          <extraMeleeDamages>
-            <li>
-              <def>Stun</def>
-              <amount>14</amount>
-            </li>
-          </extraMeleeDamages>
-        </surpriseAttack>
-      </li>
-      <li>
-        <label>head</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>4</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-        <chanceFactor>0.2</chanceFactor>
-      </li>
-    </tools>
+			<li>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<chanceFactor>0.9</chanceFactor>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>14</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>4</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
 	</ThingDef>
 
 	<PawnKindDef ParentName="AwakenedDryadKindBase">
@@ -674,6 +714,14 @@
 			<thinkTreeMain>VDE_DryadCleaner</thinkTreeMain>
 			<baseBodySize>1</baseBodySize>
 			<baseHealthScale>1</baseHealthScale>
+			<lifeStageAges>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0</minAge>
+					<soundWounded>Pawn_Dryad_Barkskin_Wounded</soundWounded>
+					<soundCall>Pawn_Dryad_Barkskin_Call</soundCall>
+				</li>
+			</lifeStageAges>
 		</race>
 	</ThingDef>
 
@@ -752,6 +800,8 @@
 			<baseHealthScale>0.8</baseHealthScale>
 			<lifeStageAges>
 				<li>
+					<def>AnimalAdult</def>
+					<minAge>0</minAge>
 					<soundWounded>Pawn_Dryad_Medicinemaker_Wounded</soundWounded>
 					<soundCall>Pawn_Dryad_Medicinemaker_Call</soundCall>
 				</li>
@@ -792,90 +842,90 @@
 		<statBases>
 			<MoveSpeed>3.2</MoveSpeed>
 		</statBases>
-    <tools Inherit="False">
-      <li>
-        <label>left claw</label>
-        <labelNoLocation>claw</labelNoLocation>
-        <capacities>
-          <li>Scratch</li>
-        </capacities>
-        <power>8</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
-        <surpriseAttack>
-          <extraMeleeDamages>
-            <li>
-              <def>Stun</def>
-              <amount>14</amount>
-            </li>
-          </extraMeleeDamages>
-        </surpriseAttack>
-        <extraMeleeDamages>
-          <li>
-            <def>EMP</def>
-            <amount>9</amount>
-          </li>
-        </extraMeleeDamages>
-      </li>
-      <li>
-        <label>right claw</label>
-        <labelNoLocation>claw</labelNoLocation>
-        <capacities>
-          <li>Scratch</li>
-        </capacities>
-        <power>8</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
-        <surpriseAttack>
-          <extraMeleeDamages>
-            <li>
-              <def>Stun</def>
-              <amount>14</amount>
-            </li>
-          </extraMeleeDamages>
-        </surpriseAttack>
-        <extraMeleeDamages>
-          <li>
-            <def>EMP</def>
-            <amount>9</amount>
-          </li>
-        </extraMeleeDamages>
-      </li>
-      <li>
-        <capacities>
-          <li>Bite</li>
-        </capacities>
-        <power>9</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
-        <chanceFactor>0.9</chanceFactor>
-        <surpriseAttack>
-          <extraMeleeDamages>
-            <li>
-              <def>Stun</def>
-              <amount>14</amount>
-            </li>
-          </extraMeleeDamages>
-        </surpriseAttack>
-        <extraMeleeDamages>
-          <li>
-            <def>EMP</def>
-            <amount>9</amount>
-          </li>
-        </extraMeleeDamages>
-      </li>
-      <li>
-        <label>head</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>4</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-        <chanceFactor>0.2</chanceFactor>
-      </li>
-    </tools>
+		<tools Inherit="False">
+			<li>
+				<label>left claw</label>
+				<labelNoLocation>claw</labelNoLocation>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>14</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+				<extraMeleeDamages>
+					<li>
+						<def>EMP</def>
+						<amount>9</amount>
+					</li>
+				</extraMeleeDamages>
+			</li>
+			<li>
+				<label>right claw</label>
+				<labelNoLocation>claw</labelNoLocation>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>14</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+				<extraMeleeDamages>
+					<li>
+						<def>EMP</def>
+						<amount>9</amount>
+					</li>
+				</extraMeleeDamages>
+			</li>
+			<li>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<chanceFactor>0.9</chanceFactor>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>14</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+				<extraMeleeDamages>
+					<li>
+						<def>EMP</def>
+						<amount>9</amount>
+					</li>
+				</extraMeleeDamages>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>4</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
 		<comps>
 			<li Class="AnimalBehaviours.CompProperties_Electrified">
 				<electroRate>80</electroRate>
@@ -905,7 +955,7 @@
 					<li>AA_HexaGelBattery</li>
 					<li>ShipCapacitor</li>
 					<li>ShipCapacitorSmall</li>
-				</batteriesToAffect>			
+				</batteriesToAffect>
 			</li>
 		</comps>
 		<race>
@@ -913,6 +963,8 @@
 			<baseHealthScale>0.8</baseHealthScale>
 			<lifeStageAges>
 				<li>
+					<def>AnimalAdult</def>
+					<minAge>0</minAge>
 					<soundWounded>Pawn_Dryad_Medicinemaker_Wounded</soundWounded>
 					<soundCall>Pawn_Dryad_Medicinemaker_Call</soundCall>
 				</li>
