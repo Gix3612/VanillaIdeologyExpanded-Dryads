@@ -15,6 +15,8 @@
 		</displayedStats>
 		<hyperlinks>
 			<ThingDef>VDE_Dryad_Stonedigger</ThingDef>
+			<ThingDef>ChunkSandstone</ThingDef>
+			<ThingDef>VDE_AwakenedDryad_Stonedigger</ThingDef>
 		</hyperlinks>
 	</GauranlenTreeModeDef>
 
@@ -34,6 +36,7 @@
 		</displayedStats>
 		<hyperlinks>
 			<ThingDef>VDE_Dryad_Spitter</ThingDef>
+			<ThingDef>VDE_AwakenedDryad_Spitter</ThingDef>
 		</hyperlinks>
 	</GauranlenTreeModeDef>
 
@@ -51,6 +54,8 @@
 		</displayedStats>
 		<hyperlinks>
 			<ThingDef>VDE_Dryad_Gaubricmaker</ThingDef>
+			<ThingDef>VDE_Gaubric</ThingDef>
+			<ThingDef>VDE_AwakenedDryad_Gaubricmaker</ThingDef>
 		</hyperlinks>
 	</GauranlenTreeModeDef>
 
@@ -68,6 +73,8 @@
 		</displayedStats>
 		<hyperlinks>
 			<ThingDef>VDE_Dryad_Nectarmaker</ThingDef>
+      <ThingDef>Ambrosia</ThingDef>
+			<ThingDef>VDE_AwakenedDryad_Nectarmaker</ThingDef>
 		</hyperlinks>
 	</GauranlenTreeModeDef>
 
@@ -86,6 +93,7 @@
     <hyperlinks>
       <ThingDef>VDE_Dryad_Agavemaker</ThingDef>
       <ThingDef>RawAgave</ThingDef>
+      <ThingDef>VDE_AwakenedDryad_Agavemaker</ThingDef>
     </hyperlinks>
   </GauranlenTreeModeDef>
 
@@ -103,6 +111,7 @@
     </displayedStats>
     <hyperlinks>
       <ThingDef>VDE_Dryad_Voltaic</ThingDef>
+      <ThingDef>VDE_AwakenedDryad_Voltaic</ThingDef>
     </hyperlinks>
   </GauranlenTreeModeDef>
 

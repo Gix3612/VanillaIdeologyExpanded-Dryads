@@ -16,7 +16,7 @@
 			<herdAnimal>true</herdAnimal>
 			<allowedOnCaravan>true</allowedOnCaravan>
 			<disableAreaControl>false</disableAreaControl>
-      <thinkTreeMain>Animal</thinkTreeMain>
+			<thinkTreeMain>VDE_AwakenedDryad</thinkTreeMain>
 			<lifeExpectancy>2</lifeExpectancy>
 			<baseBodySize>1.4</baseBodySize>
 			<baseHealthScale>1.4</baseHealthScale>
@@ -55,22 +55,22 @@
 		<race>
 			<baseBodySize>2.4</baseBodySize>
 			<baseHealthScale>1.75</baseHealthScale>
-      <trainability>Advanced</trainability>
-      <trainableTags>
-        <li>Work</li>
-      </trainableTags>
-      <untrainableTags>
-        <li>Combat</li>
-        <li>Help</li>
-        <li>Basic</li>
-      </untrainableTags>
+			<trainability>Advanced</trainability>
+			<trainableTags>
+				<li>Work</li>
+			</trainableTags>
+			<untrainableTags>
+				<li>Combat</li>
+				<li>Help</li>
+				<li>Basic</li>
+			</untrainableTags>
 			<packAnimal>true</packAnimal>
 			<lifeStageAges>
 				<li>
 					<def>AnimalAdult</def>
 					<minAge>0</minAge>
-          <soundWounded>Pawn_Dryad_Carrier_Wounded</soundWounded>
-          <soundCall>Pawn_Dryad_Carrier_Call</soundCall>
+					<soundWounded>Pawn_Dryad_Carrier_Wounded</soundWounded>
+					<soundCall>Pawn_Dryad_Carrier_Call</soundCall>
 				</li>
 			</lifeStageAges>
 		</race>
@@ -115,15 +115,15 @@
 		</comps>
 		<race>
 			<herdAnimal>false</herdAnimal>
-      <trainability>Intermediate</trainability>
-      <trainableTags>
-        <li>Basic</li>
-        <li>Combat</li>
-      </trainableTags>
-      <untrainableTags>
-        <li>Work</li>
-        <li>Help</li>
-      </untrainableTags>
+			<trainability>Intermediate</trainability>
+			<trainableTags>
+				<li>Basic</li>
+				<li>Combat</li>
+			</trainableTags>
+			<untrainableTags>
+				<li>Work</li>
+				<li>Help</li>
+			</untrainableTags>
 			<lifeStageAges>
 				<li>
 					<def>AnimalAdult</def>
@@ -245,15 +245,15 @@
 		</comps>
 		<race>
 			<baseHealthScale>2.2</baseHealthScale>
-      <trainability>Intermediate</trainability>
-      <trainableTags>
-        <li>Basic</li>
-        <li>Combat</li>
-      </trainableTags>
-      <untrainableTags>
-        <li>Work</li>
-        <li>Help</li>
-      </untrainableTags>
+			<trainability>Intermediate</trainability>
+			<trainableTags>
+				<li>Basic</li>
+				<li>Combat</li>
+			</trainableTags>
+			<untrainableTags>
+				<li>Work</li>
+				<li>Help</li>
+			</untrainableTags>
 			<lifeStageAges>
 				<li>
 					<def>AnimalAdult</def>
@@ -317,8 +317,8 @@
 				<li>
 					<def>AnimalAdult</def>
 					<minAge>0</minAge>
-          <soundWounded>Pawn_Dryad_Woodmaker_Wounded</soundWounded>
-          <soundCall>Pawn_Dryad_Woodmaker_Call</soundCall>
+					<soundWounded>Pawn_Dryad_Woodmaker_Wounded</soundWounded>
+					<soundCall>Pawn_Dryad_Woodmaker_Call</soundCall>
 				</li>
 			</lifeStageAges>
 		</race>
@@ -461,8 +461,8 @@
 				<li>
 					<def>AnimalAdult</def>
 					<minAge>0</minAge>
-          <soundWounded>Pawn_Dryad_Berrymaker_Wounded</soundWounded>
-          <soundCall>Pawn_Dryad_Berrymaker_Call</soundCall>
+					<soundWounded>Pawn_Dryad_Berrymaker_Wounded</soundWounded>
+					<soundCall>Pawn_Dryad_Berrymaker_Call</soundCall>
 				</li>
 			</lifeStageAges>
 		</race>
@@ -521,8 +521,8 @@
 				<li>
 					<def>AnimalAdult</def>
 					<minAge>0</minAge>
-          <soundWounded>Pawn_Dryad_Barkskin_Wounded</soundWounded>
-          <soundCall>Pawn_Dryad_Barkskin_Call</soundCall>
+					<soundWounded>Pawn_Dryad_Barkskin_Wounded</soundWounded>
+					<soundCall>Pawn_Dryad_Barkskin_Call</soundCall>
 				</li>
 			</lifeStageAges>
 		</race>
@@ -582,8 +582,8 @@
 				<li>
 					<def>AnimalAdult</def>
 					<minAge>0</minAge>
-          <soundWounded>Pawn_Dryad_Wounded</soundWounded>
-          <soundCall>Pawn_Dryad_Call</soundCall>
+					<soundWounded>Pawn_Dryad_Wounded</soundWounded>
+					<soundCall>Pawn_Dryad_Call</soundCall>
 				</li>
 			</lifeStageAges>
 		</race>
@@ -645,7 +645,7 @@
 			</li>
 		</verbs>
 		<race>
-      <body>Snake</body>
+			<body>Snake</body>
 			<deathAction>
 				<workerClass>VanillaIdeologyExpanded_Dryads.DeathActionWorker_AcidExplosion</workerClass>
 			</deathAction>
@@ -664,29 +664,29 @@
 				<li>
 					<def>AnimalAdult</def>
 					<minAge>0</minAge>
-          <soundWounded>Pawn_Dryad_Clawer_Wounded</soundWounded>
-          <soundCall>Pawn_Dryad_Clawer_Call</soundCall>
+					<soundWounded>Pawn_Dryad_Clawer_Wounded</soundWounded>
+					<soundCall>Pawn_Dryad_Clawer_Call</soundCall>
 				</li>
 			</lifeStageAges>
 		</race>
 		<tools Inherit="False">
-      <li>
-        <label>venom-fangs</label>
-        <capacities>
-          <li>ToxicBite</li>
-        </capacities>
-        <power>9</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
-        <surpriseAttack>
-          <extraMeleeDamages>
-            <li>
-              <def>Stun</def>
-              <amount>14</amount>
-            </li>
-          </extraMeleeDamages>
-        </surpriseAttack>
-      </li>
+			<li>
+				<label>venom-fangs</label>
+				<capacities>
+					<li>ToxicBite</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>14</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
 			<li>
 				<label>head</label>
 				<capacities>
@@ -743,15 +743,14 @@
 			</li>
 		</comps>
 		<race>
-			<thinkTreeMain>VDE_DryadCleaner</thinkTreeMain>
 			<baseBodySize>1</baseBodySize>
 			<baseHealthScale>1</baseHealthScale>
 			<lifeStageAges>
 				<li>
 					<def>AnimalAdult</def>
 					<minAge>0</minAge>
-          <soundWounded>Pawn_Dryad_Gaumaker_Wounded</soundWounded>
-          <soundCall>Pawn_Dryad_Gaumaker_Call</soundCall>
+					<soundWounded>Pawn_Dryad_Gaumaker_Wounded</soundWounded>
+					<soundCall>Pawn_Dryad_Gaumaker_Call</soundCall>
 				</li>
 			</lifeStageAges>
 		</race>
@@ -834,8 +833,8 @@
 				<li>
 					<def>AnimalAdult</def>
 					<minAge>0</minAge>
-          <soundWounded>Pawn_Dryad_Berrymaker_Wounded</soundWounded>
-          <soundCall>Pawn_Dryad_Berrymaker_Call</soundCall>
+					<soundWounded>Pawn_Dryad_Berrymaker_Wounded</soundWounded>
+					<soundCall>Pawn_Dryad_Berrymaker_Call</soundCall>
 				</li>
 			</lifeStageAges>
 		</race>

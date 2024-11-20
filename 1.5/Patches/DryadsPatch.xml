@@ -1,202 +1,238 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-  <Operation Class="VFECore.PatchOperationToggableSequence">
-    <enabled>True</enabled>
-    <label>Enable awakened dryads:</label>
-    <operations>
 
-			<!-- Carrier -->
+	<!-- Carrier -->
 
-			<li Class="PatchOperationConditional">
-				<xpath>/Defs/ThingDef[defName = "Dryad_Carrier"]/comps</xpath>
-				<nomatch Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName = "Dryad_Carrier"]</xpath>
-					<value>
-						<comps>
-							<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_PawnMerge">
-								<requiredCount>3</requiredCount>
-								<podToBuild>VDE_CarrierAwakeningCocoon</podToBuild>
-								<gizmoImage>Things/Building/UpgradeCarrier</gizmoImage>
-								<gizmoLabel>VDE_Awaken</gizmoLabel>
-								<gizmoDesc>VDE_AwakenDesc</gizmoDesc>
-							</li>
-						</comps>
-					</value>
-				</nomatch>
-				<match Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName = "Dryad_Carrier"]/comps</xpath>
-					<value>
-						<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_PawnMerge">
-							<requiredCount>3</requiredCount>
-							<podToBuild>VDE_CarrierAwakeningCocoon</podToBuild>
-							<gizmoImage>Things/Building/UpgradeCarrier</gizmoImage>
-							<gizmoLabel>VDE_Awaken</gizmoLabel>
-							<gizmoDesc>VDE_AwakenDesc</gizmoDesc>
-						</li>
-					</value>
-				</match>
-			</li>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName = "Dryad_Carrier"]/comps</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName = "Dryad_Carrier"]</xpath>
+			<value>
+				<comps>
+					<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_PawnMerge">
+						<requiredCount>3</requiredCount>
+						<podToBuild>VDE_CarrierAwakeningCocoon</podToBuild>
+						<gizmoImage>Things/Building/UpgradeCarrier</gizmoImage>
+						<gizmoLabel>VDE_Awaken</gizmoLabel>
+						<gizmoDesc>VDE_AwakenDesc</gizmoDesc>
+					</li>
+				</comps>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName = "Dryad_Carrier"]/comps</xpath>
+			<value>
+				<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_PawnMerge">
+					<requiredCount>3</requiredCount>
+					<podToBuild>VDE_CarrierAwakeningCocoon</podToBuild>
+					<gizmoImage>Things/Building/UpgradeCarrier</gizmoImage>
+					<gizmoLabel>VDE_Awaken</gizmoLabel>
+					<gizmoDesc>VDE_AwakenDesc</gizmoDesc>
+				</li>
+			</value>
+		</match>
+	</Operation>
 
-			<!-- Clawer -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/GauranlenTreeModeDef[defName = "Carrier"]/hyperlinks</xpath>
+		<value>
+			<ThingDef>VDE_AwakenedDryad_Carrier</ThingDef>
+		</value>
+	</Operation>
 
-			<li Class="PatchOperationConditional">
-				<xpath>/Defs/ThingDef[defName = "Dryad_Clawer"]/comps</xpath>
-				<nomatch Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName = "Dryad_Clawer"]</xpath>
-					<value>
-						<comps>
-							<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_PawnMerge">
-								<requiredCount>3</requiredCount>
-								<podToBuild>VDE_ClawerAwakeningCocoon</podToBuild>
-								<gizmoImage>Things/Building/UpgradeClawer</gizmoImage>
-								<gizmoLabel>VDE_Awaken</gizmoLabel>
-								<gizmoDesc>VDE_AwakenDesc</gizmoDesc>
-							</li>
-						</comps>
-					</value>
-				</nomatch>
-				<match Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName = "Dryad_Clawer"]/comps</xpath>
-					<value>
-						<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_PawnMerge">
-							<requiredCount>3</requiredCount>
-							<podToBuild>VDE_ClawerAwakeningCocoon</podToBuild>
-							<gizmoImage>Things/Building/UpgradeClawer</gizmoImage>
-							<gizmoLabel>VDE_Awaken</gizmoLabel>
-							<gizmoDesc>VDE_AwakenDesc</gizmoDesc>
-						</li>
-					</value>
-				</match>
-			</li>
+	<!-- Clawer -->
 
-			<!-- Barkskin -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName = "Dryad_Clawer"]/comps</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName = "Dryad_Clawer"]</xpath>
+			<value>
+				<comps>
+					<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_PawnMerge">
+						<requiredCount>3</requiredCount>
+						<podToBuild>VDE_ClawerAwakeningCocoon</podToBuild>
+						<gizmoImage>Things/Building/UpgradeClawer</gizmoImage>
+						<gizmoLabel>VDE_Awaken</gizmoLabel>
+						<gizmoDesc>VDE_AwakenDesc</gizmoDesc>
+					</li>
+				</comps>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName = "Dryad_Clawer"]/comps</xpath>
+			<value>
+				<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_PawnMerge">
+					<requiredCount>3</requiredCount>
+					<podToBuild>VDE_ClawerAwakeningCocoon</podToBuild>
+					<gizmoImage>Things/Building/UpgradeClawer</gizmoImage>
+					<gizmoLabel>VDE_Awaken</gizmoLabel>
+					<gizmoDesc>VDE_AwakenDesc</gizmoDesc>
+				</li>
+			</value>
+		</match>
+	</Operation>
 
-			<li Class="PatchOperationConditional">
-				<xpath>/Defs/ThingDef[defName = "Dryad_Barkskin"]/comps</xpath>
-				<nomatch Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName = "Dryad_Barkskin"]</xpath>
-					<value>
-						<comps>
-							<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_PawnMerge">
-								<requiredCount>3</requiredCount>
-								<podToBuild>VDE_BarkskinAwakeningCocoon</podToBuild>
-								<gizmoImage>Things/Building/UpgradeBarkskin</gizmoImage>
-								<gizmoLabel>VDE_Awaken</gizmoLabel>
-								<gizmoDesc>VDE_AwakenDesc</gizmoDesc>
-							</li>
-						</comps>
-					</value>
-				</nomatch>
-				<match Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName = "Dryad_Barkskin"]/comps</xpath>
-					<value>
-						<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_PawnMerge">
-							<requiredCount>3</requiredCount>
-							<podToBuild>VDE_BarkskinAwakeningCocoon</podToBuild>
-							<gizmoImage>Things/Building/UpgradeBarkskin</gizmoImage>
-							<gizmoLabel>VDE_Awaken</gizmoLabel>
-							<gizmoDesc>VDE_AwakenDesc</gizmoDesc>
-						</li>
-					</value>
-				</match>
-			</li>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/GauranlenTreeModeDef[defName = "Clawer"]/hyperlinks</xpath>
+		<value>
+			<ThingDef>VDE_AwakenedDryad_Clawer</ThingDef>
+		</value>
+	</Operation>
 
-			<!-- Woodmaker -->
+	<!-- Barkskin -->
 
-			<li Class="PatchOperationConditional">
-				<xpath>/Defs/ThingDef[defName = "Dryad_Woodmaker"]/comps</xpath>
-				<nomatch Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName = "Dryad_Woodmaker"]</xpath>
-					<value>
-						<comps>
-							<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_PawnMerge">
-								<requiredCount>3</requiredCount>
-								<podToBuild>VDE_WoodmakerAwakeningCocoon</podToBuild>
-								<gizmoImage>Things/Building/UpgradeWoodmaker</gizmoImage>
-								<gizmoLabel>VDE_Awaken</gizmoLabel>
-								<gizmoDesc>VDE_AwakenDesc</gizmoDesc>
-							</li>
-						</comps>
-					</value>
-				</nomatch>
-				<match Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName = "Dryad_Woodmaker"]/comps</xpath>
-					<value>
-						<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_PawnMerge">
-							<requiredCount>3</requiredCount>
-							<podToBuild>VDE_WoodmakerAwakeningCocoon</podToBuild>
-							<gizmoImage>Things/Building/UpgradeWoodmaker</gizmoImage>
-							<gizmoLabel>VDE_Awaken</gizmoLabel>
-							<gizmoDesc>VDE_AwakenDesc</gizmoDesc>
-						</li>
-					</value>
-				</match>
-			</li>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName = "Dryad_Barkskin"]/comps</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName = "Dryad_Barkskin"]</xpath>
+			<value>
+				<comps>
+					<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_PawnMerge">
+						<requiredCount>3</requiredCount>
+						<podToBuild>VDE_BarkskinAwakeningCocoon</podToBuild>
+						<gizmoImage>Things/Building/UpgradeBarkskin</gizmoImage>
+						<gizmoLabel>VDE_Awaken</gizmoLabel>
+						<gizmoDesc>VDE_AwakenDesc</gizmoDesc>
+					</li>
+				</comps>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName = "Dryad_Barkskin"]/comps</xpath>
+			<value>
+				<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_PawnMerge">
+					<requiredCount>3</requiredCount>
+					<podToBuild>VDE_BarkskinAwakeningCocoon</podToBuild>
+					<gizmoImage>Things/Building/UpgradeBarkskin</gizmoImage>
+					<gizmoLabel>VDE_Awaken</gizmoLabel>
+					<gizmoDesc>VDE_AwakenDesc</gizmoDesc>
+				</li>
+			</value>
+		</match>
+	</Operation>
 
-			<!-- Medicinemaker -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/GauranlenTreeModeDef[defName = "Barkskin"]/hyperlinks</xpath>
+		<value>
+			<ThingDef>VDE_AwakenedDryad_Barkskin</ThingDef>
+		</value>
+	</Operation>
 
-			<li Class="PatchOperationConditional">
-				<xpath>/Defs/ThingDef[defName = "Dryad_Medicinemaker"]/comps</xpath>
-				<nomatch Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName = "Dryad_Medicinemaker"]</xpath>
-					<value>
-						<comps>
-							<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_PawnMerge">
-								<requiredCount>3</requiredCount>
-								<podToBuild>VDE_MedicinemakerAwakeningCocoon</podToBuild>
-								<gizmoImage>Things/Building/UpgradeMedicinemaker</gizmoImage>
-								<gizmoLabel>VDE_Awaken</gizmoLabel>
-								<gizmoDesc>VDE_AwakenDesc</gizmoDesc>
-							</li>
-						</comps>
-					</value>
-				</nomatch>
-				<match Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName = "Dryad_Medicinemaker"]/comps</xpath>
-					<value>
-						<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_PawnMerge">
-							<requiredCount>3</requiredCount>
-							<podToBuild>VDE_MedicinemakerAwakeningCocoon</podToBuild>
-							<gizmoImage>Things/Building/UpgradeMedicinemaker</gizmoImage>
-							<gizmoLabel>VDE_Awaken</gizmoLabel>
-							<gizmoDesc>VDE_AwakenDesc</gizmoDesc>
-						</li>
-					</value>
-				</match>
-			</li>
+	<!-- Woodmaker -->
 
-			<!-- Berrymaker -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName = "Dryad_Woodmaker"]/comps</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName = "Dryad_Woodmaker"]</xpath>
+			<value>
+				<comps>
+					<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_PawnMerge">
+						<requiredCount>3</requiredCount>
+						<podToBuild>VDE_WoodmakerAwakeningCocoon</podToBuild>
+						<gizmoImage>Things/Building/UpgradeWoodmaker</gizmoImage>
+						<gizmoLabel>VDE_Awaken</gizmoLabel>
+						<gizmoDesc>VDE_AwakenDesc</gizmoDesc>
+					</li>
+				</comps>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName = "Dryad_Woodmaker"]/comps</xpath>
+			<value>
+				<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_PawnMerge">
+					<requiredCount>3</requiredCount>
+					<podToBuild>VDE_WoodmakerAwakeningCocoon</podToBuild>
+					<gizmoImage>Things/Building/UpgradeWoodmaker</gizmoImage>
+					<gizmoLabel>VDE_Awaken</gizmoLabel>
+					<gizmoDesc>VDE_AwakenDesc</gizmoDesc>
+				</li>
+			</value>
+		</match>
+	</Operation>
 
-			<li Class="PatchOperationConditional">
-				<xpath>/Defs/ThingDef[defName = "Dryad_Berrymaker"]/comps</xpath>
-				<nomatch Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName = "Dryad_Berrymaker"]</xpath>
-					<value>
-						<comps>
-							<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_PawnMerge">
-								<requiredCount>3</requiredCount>
-								<podToBuild>VDE_BerrymakerAwakeningCocoon</podToBuild>
-								<gizmoImage>Things/Building/UpgradeBerrymaker</gizmoImage>
-								<gizmoLabel>VDE_Awaken</gizmoLabel>
-								<gizmoDesc>VDE_AwakenDesc</gizmoDesc>
-							</li>
-						</comps>
-					</value>
-				</nomatch>
-				<match Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName = "Dryad_Berrymaker"]/comps</xpath>
-					<value>
-						<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_PawnMerge">
-							<requiredCount>3</requiredCount>
-							<podToBuild>VDE_BerrymakerAwakeningCocoon</podToBuild>
-							<gizmoImage>Things/Building/UpgradeBerrymaker</gizmoImage>
-							<gizmoLabel>VDE_Awaken</gizmoLabel>
-							<gizmoDesc>VDE_AwakenDesc</gizmoDesc>
-						</li>
-					</value>
-				</match>
-			</li>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/GauranlenTreeModeDef[defName = "Woodmaker"]/hyperlinks</xpath>
+		<value>
+			<ThingDef>VDE_AwakenedDryad_Woodmaker</ThingDef>
+		</value>
+	</Operation>
 
-    </operations>
-  </Operation>	
+	<!-- Medicinemaker -->
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName = "Dryad_Medicinemaker"]/comps</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName = "Dryad_Medicinemaker"]</xpath>
+			<value>
+				<comps>
+					<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_PawnMerge">
+						<requiredCount>3</requiredCount>
+						<podToBuild>VDE_MedicinemakerAwakeningCocoon</podToBuild>
+						<gizmoImage>Things/Building/UpgradeMedicinemaker</gizmoImage>
+						<gizmoLabel>VDE_Awaken</gizmoLabel>
+						<gizmoDesc>VDE_AwakenDesc</gizmoDesc>
+					</li>
+				</comps>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName = "Dryad_Medicinemaker"]/comps</xpath>
+			<value>
+				<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_PawnMerge">
+					<requiredCount>3</requiredCount>
+					<podToBuild>VDE_MedicinemakerAwakeningCocoon</podToBuild>
+					<gizmoImage>Things/Building/UpgradeMedicinemaker</gizmoImage>
+					<gizmoLabel>VDE_Awaken</gizmoLabel>
+					<gizmoDesc>VDE_AwakenDesc</gizmoDesc>
+				</li>
+			</value>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/GauranlenTreeModeDef[defName = "Medicinemaker"]/hyperlinks</xpath>
+		<value>
+			<ThingDef>VDE_AwakenedDryad_Medicinemaker</ThingDef>
+		</value>
+	</Operation>
+
+	<!-- Berrymaker -->
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName = "Dryad_Berrymaker"]/comps</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName = "Dryad_Berrymaker"]</xpath>
+			<value>
+				<comps>
+					<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_PawnMerge">
+						<requiredCount>3</requiredCount>
+						<podToBuild>VDE_BerrymakerAwakeningCocoon</podToBuild>
+						<gizmoImage>Things/Building/UpgradeBerrymaker</gizmoImage>
+						<gizmoLabel>VDE_Awaken</gizmoLabel>
+						<gizmoDesc>VDE_AwakenDesc</gizmoDesc>
+					</li>
+				</comps>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName = "Dryad_Berrymaker"]/comps</xpath>
+			<value>
+				<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_PawnMerge">
+					<requiredCount>3</requiredCount>
+					<podToBuild>VDE_BerrymakerAwakeningCocoon</podToBuild>
+					<gizmoImage>Things/Building/UpgradeBerrymaker</gizmoImage>
+					<gizmoLabel>VDE_Awaken</gizmoLabel>
+					<gizmoDesc>VDE_AwakenDesc</gizmoDesc>
+				</li>
+			</value>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/GauranlenTreeModeDef[defName = "Berrymaker"]/hyperlinks</xpath>
+		<value>
+			<ThingDef>VDE_AwakenedDryad_Berrymaker</ThingDef>
+		</value>
+	</Operation>
+
 </Patch>
