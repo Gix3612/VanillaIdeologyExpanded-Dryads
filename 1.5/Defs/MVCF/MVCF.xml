@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
 
-
 	<MVCF.ModDef>
 		<defName>VDE_VanillaDryadsExpanded</defName>
 		<label>Vanilla Dryads Expanded</label>
@@ -12,10 +11,5 @@
 			<li>IntegratedToggle</li>
 		</ActivateFeatures>
 	</MVCF.ModDef>
-
-
-
-
-
-
+	
 </Defs>

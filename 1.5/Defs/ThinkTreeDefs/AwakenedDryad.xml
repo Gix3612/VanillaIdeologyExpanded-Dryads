@@ -1,230 +1,252 @@
 <?xml version="1.0" encoding="utf-8" ?>
-
-
 <Defs>
+	<ThinkTreeDef>
+		<defName>VDE_AwakenedDryad</defName>
+		<thinkRoot Class="ThinkNode_Priority">
+		
+			<subNodes>
 
-  <ThinkTreeDef>
-    <defName>VDE_AwakenedDryad</defName>
-    <thinkRoot Class="ThinkNode_Priority">
-      <subNodes>
-        <!-- Keep lying down if we have to -->
-        <li Class="ThinkNode_ConditionalMustKeepLyingDown">
-          <subNodes>
-            <!-- Do a queued job if possible -->
-            <li Class="ThinkNode_QueuedJob">
-              <inBedOnly>true</inBedOnly>
-            </li>
+				<!-- Keep lying down if we have to -->
 
-            <!-- Keep lying down -->
-            <li Class="JobGiver_KeepLyingDown" />
-          </subNodes>
-        </li>
+				<li Class="ThinkNode_ConditionalMustKeepLyingDown">
+					<subNodes>
 
-        <li Class="ThinkNode_Subtree">
-          <treeDef>Downed</treeDef>
-        </li>
+						<!-- Do a queued job if possible -->
 
-        <li Class="ThinkNode_Subtree">
-          <treeDef>BurningResponse</treeDef>
-        </li>
+						<li Class="ThinkNode_QueuedJob">
+							<inBedOnly>true</inBedOnly>
+						</li>
 
-        <li Class="ThinkNode_Subtree">
-          <treeDef>MentalStateCritical</treeDef>
-        </li>
+						<!-- Keep lying down -->
 
-        <li Class="ThinkNode_Subtree">
-          <treeDef>MentalStateNonCritical</treeDef>
-        </li>
+						<li Class="JobGiver_KeepLyingDown"/>
 
-        <li Class="JobGiver_FightFiresNearConnectedTree" />
+					</subNodes>
+				</li>
+				<li Class="ThinkNode_Subtree">
+					<treeDef>Downed</treeDef>
+				</li>
+				<li Class="ThinkNode_Subtree">
+					<treeDef>BurningResponse</treeDef>
+				</li>
+				<li Class="ThinkNode_Subtree">
+					<treeDef>MentalStateCritical</treeDef>
+				</li>
+				<li Class="ThinkNode_Subtree">
+					<treeDef>MentalStateNonCritical</treeDef>
+				</li>
+				<li Class="JobGiver_FightFiresNearConnectedTree"/>
 
-        <!-- React to close melee threat -->
-        <li Class="JobGiver_ReactToCloseMeleeThreat" />
+				<!-- React to close melee threat -->
 
-        <!-- Do a queued job -->
-        <li Class="ThinkNode_QueuedJob" />
+				<li Class="JobGiver_ReactToCloseMeleeThreat"/>
 
-        <!-- If not player controlled, leave the map -->
-        <li Class="ThinkNode_ConditionalOfPlayerFaction">
+				<!-- Do a queued job -->
+
+				<li Class="ThinkNode_QueuedJob"/>
+
+				<!-- If not player controlled, leave the map -->
+
+				<li Class="ThinkNode_ConditionalOfPlayerFaction">
 					<invert>true</invert>
-          <subNodes>
-            <li Class="ThinkNode_ConditionalCanReachMapEdge">
-              <subNodes>
-                <li Class="JobGiver_ExitMapRandom">
-                  <defaultLocomotion>Walk</defaultLocomotion>
-                </li>
-              </subNodes>
-            </li>
-          </subNodes>
-        </li>
+					<subNodes>
+						<li Class="ThinkNode_ConditionalCanReachMapEdge">
+							<subNodes>
+								<li Class="JobGiver_ExitMapRandom">
+									<defaultLocomotion>Walk</defaultLocomotion>
+								</li>
+							</subNodes>
+						</li>
+					</subNodes>
+				</li>
 
-        <!-- Forced goto -->
-        <li Class="ThinkNode_ConditionalForcedGoto">
-          <subNodes>
-            <li Class="ThinkNode_Tagger">
-              <tagToGive>Misc</tagToGive>
-              <subNodes>
-                <li Class="JobGiver_ForcedGoto" />
-              </subNodes>
-            </li>
-          </subNodes>
-        </li>
+				<!-- Forced goto -->
 
-        <!-- Behavior when roped -->
-        <li Class="ThinkNode_Subtree">
-          <treeDef>RopedPawn</treeDef>
-        </li>
+				<li Class="ThinkNode_ConditionalForcedGoto">
+					<subNodes>
+						<li Class="ThinkNode_Tagger">
+							<tagToGive>Misc</tagToGive>
+							<subNodes>
+								<li Class="JobGiver_ForcedGoto"/>
+							</subNodes>
+						</li>
+					</subNodes>
+				</li>
 
-        <!-- Wait if drafted -->
-        <li Class="ThinkNode_ConditionalColonist">
-          <subNodes>
-            <li Class="ThinkNode_Tagger">
-              <tagToGive>DraftedOrder</tagToGive>
-              <subNodes>
-                <li Class="JobGiver_MoveToStandable" />
-                <li Class="JobGiver_Orders" />
-              </subNodes>
-            </li>
-          </subNodes>
-        </li>
+				<!-- Behavior when roped -->
 
-        <!-- Lord directives -->
-        <li Class="ThinkNode_Subtree">
-          <treeDef>LordDuty</treeDef>
-        </li>
+				<li Class="ThinkNode_Subtree">
+					<treeDef>RopedPawn</treeDef>
+				</li>
 
-        <!-- Lay eggs you need to -->
-        <li Class="JobGiver_LayEgg" />
+				<!-- Wait if drafted -->
 
-        <!-- Primary faction actions -->
-        <li Class="ThinkNode_ConditionalOfPlayerFaction">
-          <subNodes>
-            <li Class="ThinkNode_Tagger">
-              <tagToGive>TrainedAnimalBehavior</tagToGive>
-              <subNodes>
-                <!-- Trained behavior: obedience: Follow and defend master -->
-                <li Class="ThinkNode_ConditionalTrainableCompleted">
-                  <trainable>Obedience</trainable>
-                  <subNodes>
-                    <li Class="ThinkNode_ConditionalShouldFollowMaster" >
-                      <subNodes>
-                        <li Class="JobGiver_AIDefendMaster">
-                          <attackMeleeThreatEvenIfNotHostile>true</attackMeleeThreatEvenIfNotHostile>
-                        </li>
-                        <li Class="JobGiver_AIFollowMaster"/>
-                        <li Class="JobGiver_WanderNearMaster" />
-                      </subNodes>
-                    </li>
-                  </subNodes>
-                </li>
+				<li Class="ThinkNode_ConditionalOfPlayerFaction">
+					<subNodes>
+						<li Class="ThinkNode_Tagger">
+							<tagToGive>DraftedOrder</tagToGive>
+							<subNodes>
+								<li Class="JobGiver_MoveToStandable"/>
+								<li Class="JobGiver_Orders"/>
+							</subNodes>
+						</li>
+					</subNodes>
+				</li>
 
-                <!-- Trained behavior: Rescue-->
-                <li Class="ThinkNode_ConditionalTrainableCompleted">
-                  <trainable>Rescue</trainable>
-                  <subNodes>
-                    <li Class="JobGiver_RescueNearby">
-                      <radius>75</radius>
-                    </li>
-                  </subNodes>
-                </li>
-              </subNodes>
-            </li>            
-          </subNodes>
-        </li>
+				<!-- Lord directives -->
 
-        <!-- Eat random things out of curiosity -->
-        <li Class="ThinkNode_ChancePerHour_Constant">
-          <mtbDays>60</mtbDays>
-          <subNodes>
-            <li Class="ThinkNode_Tagger">
-              <tagToGive>SatisfyingNeeds</tagToGive>
-              <subNodes>
-                <li Class="JobGiver_EatRandom"/>
-              </subNodes>
-            </li>
-          </subNodes>
-        </li>
-        
-        <!-- Satisfy basic needs -->
-        <li Class="ThinkNode_Subtree">
-          <treeDef>SatisfyBasicNeeds</treeDef>
-        </li>
+				<li Class="ThinkNode_Subtree">
+					<treeDef>LordDuty</treeDef>
+				</li>
 
-        <!-- Secondary faction actions -->
-        <li Class="ThinkNode_ConditionalOfPlayerFaction">
-          <subNodes>
-            <!-- Take care of critical needs (below rescue - so heroic!)-->
-            <li Class="ThinkNode_Tagger">
-              <tagToGive>RestingForMedicalReasons</tagToGive>
-              <subNodes>
-                <li Class="JobGiver_PatientGoToBed" />
-              </subNodes>
-            </li>
-            <li Class="JobGiver_SeekAllowedArea" />
-            <li Class="JobGiver_SeekSafeTemperature" />
+				<!-- Lay eggs you need to -->
 
-            <li Class="ThinkNode_Tagger">
-              <tagToGive>RestingForMedicalReasons</tagToGive>
-              <subNodes>
-                <li Class="JobGiver_PatientGoToBed" />
-              </subNodes>
-            </li>
+				<li Class="JobGiver_LayEgg"/>
 
-            <!-- Nuzzle randoms -->
-            <li Class="ThinkNode_ChancePerHour_Nuzzle">
-              <subNodes>
-                <li Class="ThinkNode_Tagger">
-                  <tagToGive>Misc</tagToGive>
-                  <subNodes>
-                    <li Class="JobGiver_Nuzzle" />
-                  </subNodes>
-                </li>
-              </subNodes>
-            </li>
+				<!-- Primary faction actions -->
+
+				<li Class="ThinkNode_ConditionalOfPlayerFaction">
+					<subNodes>
+						<li Class="ThinkNode_Tagger">
+							<tagToGive>TrainedAnimalBehavior</tagToGive>
+							<subNodes>
+
+								<!-- Trained behavior: obedience: Follow and defend master -->
+
+								<li Class="ThinkNode_ConditionalTrainableCompleted">
+									<trainable>Obedience</trainable>
+									<subNodes>
+										<li Class="ThinkNode_ConditionalShouldFollowMaster">
+											<subNodes>
+												<li Class="JobGiver_AIDefendMaster">
+													<attackMeleeThreatEvenIfNotHostile>true</attackMeleeThreatEvenIfNotHostile>
+												</li>
+												<li Class="JobGiver_AIFollowMaster"/>
+												<li Class="JobGiver_WanderNearMaster"/>
+											</subNodes>
+										</li>
+									</subNodes>
+								</li>
+
+								<!-- Trained behavior: Rescue-->
+
+								<li Class="ThinkNode_ConditionalTrainableCompleted">
+									<trainable>Rescue</trainable>
+									<subNodes>
+										<li Class="JobGiver_RescueNearby">
+											<radius>75</radius>
+										</li>
+									</subNodes>
+								</li>
+
+							</subNodes>
+						</li>
+					</subNodes>
+				</li>
+
+				<!-- Eat random things out of curiosity -->
+
+				<li Class="ThinkNode_ChancePerHour_Constant">
+					<mtbDays>60</mtbDays>
+					<subNodes>
+						<li Class="ThinkNode_Tagger">
+							<tagToGive>SatisfyingNeeds</tagToGive>
+							<subNodes>
+								<li Class="JobGiver_EatRandom"/>
+							</subNodes>
+						</li>
+					</subNodes>
+				</li>
+
+				<!-- Satisfy basic needs -->
+
+				<li Class="ThinkNode_Subtree">
+					<treeDef>SatisfyBasicNeeds</treeDef>
+				</li>
+
+				<!-- Secondary faction actions -->
+
+				<li Class="ThinkNode_ConditionalOfPlayerFaction">
+					<subNodes>
+
+						<!-- Take care of critical needs (below rescue - so heroic!)-->
+
+						<li Class="ThinkNode_Tagger">
+							<tagToGive>RestingForMedicalReasons</tagToGive>
+							<subNodes>
+								<li Class="JobGiver_PatientGoToBed"/>
+							</subNodes>
+						</li>
+						<li Class="JobGiver_SeekAllowedArea"/>
+						<li Class="JobGiver_SeekSafeTemperature"/>
+						<li Class="ThinkNode_Tagger">
+							<tagToGive>RestingForMedicalReasons</tagToGive>
+							<subNodes>
+								<li Class="JobGiver_PatientGoToBed"/>
+							</subNodes>
+						</li>
+
+						<!-- Nuzzle randoms -->
+
+						<li Class="ThinkNode_ChancePerHour_Nuzzle">
+							<subNodes>
+								<li Class="ThinkNode_Tagger">
+									<tagToGive>Misc</tagToGive>
+									<subNodes>
+										<li Class="JobGiver_Nuzzle"/>
+									</subNodes>
+								</li>
+							</subNodes>
+						</li>
 
 						<!-- Trained behavior -->
-            <li Class="ThinkNode_ChancePerHour_Constant">
-              <mtbHours>0.75</mtbHours>
-              <subNodes>
-                <li Class="ThinkNode_ConditionalRequireCapacities">
-                  <requiredCapacities>
-                    <li>Manipulation</li>
-                  </requiredCapacities>
-                  <subNodes>
-                    <li Class="ThinkNode_ConditionalTrainableCompleted">
-                      <trainable>Haul</trainable>
-                      <subNodes>
-                        <li Class="ThinkNode_Tagger">
-                          <tagToGive>TrainedAnimalBehavior</tagToGive>
-                          <subNodes>
-                            <li Class="JobGiver_Haul" />
-                          </subNodes>
-                        </li>
-                      </subNodes>
-                    </li>
-                    <li Class="ThinkNode_ConditionalTrainableCompleted">
-                      <trainable>Haul</trainable>
-                      <subNodes>
-                        <li Class="ThinkNode_Tagger">
-                          <tagToGive>TrainedAnimalBehavior</tagToGive>
-                          <subNodes>
-														<li Class="VanillaIdeologyExpanded_Dryads.JobGiver_Clean" />
-                          </subNodes>
-                        </li>
-                      </subNodes>
-                    </li>
-                  </subNodes>
-                </li>
-              </subNodes>
-            </li>
-          </subNodes>
-        </li>
 
-        <!-- Wander near colony if possible -->
+						<li Class="ThinkNode_ChancePerHour_Constant">
+							<mtbHours>0.75</mtbHours>
+							<subNodes>
+								<li Class="ThinkNode_ConditionalRequireCapacities">
+									<requiredCapacities>
+										<li>Manipulation</li>
+									</requiredCapacities>
+									<subNodes>
+										<li Class="ThinkNode_ConditionalTrainableCompleted">
+											<trainable>Haul</trainable>
+											<subNodes>
+												<li Class="ThinkNode_Tagger">
+													<tagToGive>TrainedAnimalBehavior</tagToGive>
+													<subNodes>
+														<li Class="JobGiver_Haul"/>
+													</subNodes>
+												</li>
+											</subNodes>
+										</li>
+										<li Class="ThinkNode_ConditionalPawnKind">
+											<pawnKind>VDE_Dryad_Gaubricmaker_Awakened</pawnKind>
+											<subNodes>
+												<li Class="ThinkNode_Tagger">
+													<tagToGive>TrainedAnimalBehavior</tagToGive>
+													<subNodes>
+														<li Class="VanillaIdeologyExpanded_Dryads.JobGiver_Clean"/>
+													</subNodes>
+												</li>
+											</subNodes>
+										</li>
+									</subNodes>
+								</li>
+							</subNodes>
+						</li>
+
+					</subNodes>
+				</li>
+
+				<!-- Wander near colony if possible -->
+
 				<li Class="ThinkNode_Tagger">
 					<tagToGive>Idle</tagToGive>
 					<subNodes>
+
 						<!-- Wander near your current position if in hostile map -->
+
 						<li Class="ThinkNode_ConditionalAnyEnemyInHostileMap">
 							<subNodes>
 								<li Class="JobGiver_WanderAnywhere">
@@ -235,36 +257,38 @@
 						</li>
 
 						<!-- Wander near colony -->
+
 						<li Class="JobGiver_WanderColony">
 							<maxDanger>None</maxDanger>
 							<ticksBetweenWandersRange>120~240</ticksBetweenWandersRange>
 						</li>
+
 					</subNodes>
 				</li>
 
-        <!-- Wander -->
-        <li Class="ThinkNode_Tagger">
-          <tagToGive>Idle</tagToGive>
-          <subNodes>
-            <li Class="ThinkNode_ConditionalHerdAnimal">
-              <subNodes>
-                <li Class="JobGiver_WanderHerd">
-                  <maxDanger>Deadly</maxDanger>
-                  <ticksBetweenWandersRange>120~240</ticksBetweenWandersRange>
-                </li>
-              </subNodes>
-            </li>
-            
-            <li Class="JobGiver_WanderAnywhere">
-              <maxDanger>Deadly</maxDanger>
-              <ticksBetweenWandersRange>120~240</ticksBetweenWandersRange>    
-            </li>
-          </subNodes>
-        </li>
+				<!-- Wander -->
 
-        <li Class="JobGiver_IdleError"/>
-      </subNodes>
-    </thinkRoot>
-  </ThinkTreeDef>
-  
+				<li Class="ThinkNode_Tagger">
+					<tagToGive>Idle</tagToGive>
+					<subNodes>
+						<li Class="ThinkNode_ConditionalHerdAnimal">
+							<subNodes>
+								<li Class="JobGiver_WanderHerd">
+									<maxDanger>Deadly</maxDanger>
+									<ticksBetweenWandersRange>120~240</ticksBetweenWandersRange>
+								</li>
+							</subNodes>
+						</li>
+						<li Class="JobGiver_WanderAnywhere">
+							<maxDanger>Deadly</maxDanger>
+							<ticksBetweenWandersRange>120~240</ticksBetweenWandersRange>
+						</li>
+					</subNodes>
+				</li>
+				<li Class="JobGiver_IdleError"/>
+
+			</subNodes>
+
+		</thinkRoot>
+	</ThinkTreeDef>
 </Defs>

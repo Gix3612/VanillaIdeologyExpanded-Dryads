@@ -6,7 +6,6 @@
 	<ThingDef ParentName="DryadBase" Name="AwakenedDryadBase" Abstract="True">
 		<statBases>
 			<MarketValue>300</MarketValue>
-			<FilthRate>1</FilthRate>
 		</statBases>
 		<descriptionHyperlinks Inherit="False"/>
 		<tradeTags Inherit="False">
@@ -38,17 +37,17 @@
 			</li>
 		</comps>
 	</ThingDef>
-
+	
 	<PawnKindDef Name="AwakenedDryadKindBase" ParentName="DryadKindBase" Abstract="True">
 		<ecoSystemWeight>1.1</ecoSystemWeight>
 	</PawnKindDef>
-
+	
 	<!-- Awakened Carrier -->
-
+	
 	<ThingDef ParentName="AwakenedDryadBase">
-		<defName>VDE_AwakenedDryad_Carrier</defName>
+		<defName>Dryad_Carrier_Awakened</defName>
 		<label>awakened carrier dryad</label>
-		<description>A dryad caste specialized in carrying items. Its awakening has improved their size, carrying capacity and added functionality as a pack animal for long-distance hauling.\n\nAwakened dryads have both advantages and disadvantages compared to their bound relatives. While more proficient, specialized and unshackled, they can neither morph nor receive nourishment from a queen, resulting in a very limited lifespan.</description>
+		<description>A dryad caste specialized in carrying items. It's awakening has improved their size, carrying capacity and added functionality as a pack animal for long-distance hauling.\n\nAwakened dryads have both advantages and disadvantages compared to their bound relatives. While more proficient, specialized and unshackled, they can neither morph nor receive nourishment from a queen, resulting in a very limited lifespan.</description>
 		<statBases>
 			<MoveSpeed>2.95</MoveSpeed>
 		</statBases>
@@ -68,18 +67,17 @@
 			<lifeStageAges>
 				<li>
 					<def>AnimalAdult</def>
-					<minAge>0</minAge>
 					<soundWounded>Pawn_Dryad_Carrier_Wounded</soundWounded>
 					<soundCall>Pawn_Dryad_Carrier_Call</soundCall>
 				</li>
 			</lifeStageAges>
 		</race>
 	</ThingDef>
-
+	
 	<PawnKindDef ParentName="AwakenedDryadKindBase">
-		<defName>VDE_AwakenedDryad_Carrier</defName>
+		<defName>Dryad_Carrier_Awakened</defName>
 		<label>awakened carrier dryad</label>
-		<race>VDE_AwakenedDryad_Carrier</race>
+		<race>Dryad_Carrier_Awakened</race>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
@@ -97,18 +95,18 @@
 			</li>
 		</lifeStages>
 	</PawnKindDef>
-
+	
 	<!-- Awakened Clawer -->
-
+	
 	<ThingDef ParentName="AwakenedDryadBase">
-		<defName>VDE_AwakenedDryad_Clawer</defName>
+		<defName>Dryad_Clawer_Awakened</defName>
 		<label>awakened clawer dryad</label>
-		<description>A dryad caste with huge claws that is specialized in aggression and damage-dealing attacks. Its awakening has improved their combat prowess and strengthened the wings, permitting them to ignore terrain movement penalties.\n\nAwakened dryads have both advantages and disadvantages compared to their bound relatives. While more proficient, specialized and unshackled, they can neither morph nor receive nourishment from a queen, resulting in a very limited lifespan.</description>
+		<description>A dryad caste with huge claws that is specialized in aggression and damage-dealing attacks. It's awakening has improved their combat prowess and strengthened the wings, permitting them to ignore terrain movement penalties.\n\nAwakened dryads have both advantages and disadvantages compared to their bound relatives. While more proficient, specialized and unshackled, they can neither morph nor receive nourishment from a queen, resulting in a very limited lifespan.</description>
 		<statBases>
 			<MoveSpeed>5</MoveSpeed>
 		</statBases>
 		<comps>
-			<li Class="AnimalBehaviours.CompProperties_Floating" />
+			<li Class="AnimalBehaviours.CompProperties_Floating"/>
 			<li Class="AnimalBehaviours.CompProperties_Draftable">
 				<makeNonFleeingToo>true</makeNonFleeingToo>
 			</li>
@@ -127,7 +125,6 @@
 			<lifeStageAges>
 				<li>
 					<def>AnimalAdult</def>
-					<minAge>0</minAge>
 					<soundWounded>Pawn_Dryad_Clawer_Wounded</soundWounded>
 					<soundCall>Pawn_Dryad_Clawer_Call</soundCall>
 				</li>
@@ -200,11 +197,11 @@
 			</li>
 		</tools>
 	</ThingDef>
-
+	
 	<PawnKindDef ParentName="AwakenedDryadKindBase">
-		<defName>VDE_AwakenedDryad_Clawer</defName>
+		<defName>Dryad_Clawer_Awakened</defName>
 		<label>awakened clawer dryad</label>
-		<race>VDE_AwakenedDryad_Clawer</race>
+		<race>Dryad_Clawer_Awakened</race>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
@@ -222,13 +219,13 @@
 			</li>
 		</lifeStages>
 	</PawnKindDef>
-
+	
 	<!-- Awakened Barkskin -->
-
+	
 	<ThingDef ParentName="AwakenedDryadBase">
-		<defName>VDE_AwakenedDryad_Barkskin</defName>
+		<defName>Dryad_Barkskin_Awakened</defName>
 		<label>awakened barkskin dryad</label>
-		<description>A dryad caste specialized in absorbing hits during combat. Its awakening has created multiple layers of hardened bark and deadened all pain receptors. Can act as a mobile form of cover.\n\nAwakened dryads have both advantages and disadvantages compared to their bound relatives. While more proficient, specialized and unshackled, they can neither morph nor receive nourishment from a queen, resulting in a very limited lifespan.</description>
+		<description>A dryad caste specialized in absorbing hits during combat. It's awakening has created multiple layers of hardened bark and deadened all pain receptors. Can act as a mobile form of cover.\n\nAwakened dryads have both advantages and disadvantages compared to their bound relatives. While more proficient, specialized and unshackled, they can neither morph nor receive nourishment from a queen, resulting in a very limited lifespan.</description>
 		<statBases>
 			<MoveSpeed>3.4</MoveSpeed>
 			<ArmorRating_Blunt>0.55</ArmorRating_Blunt>
@@ -257,18 +254,17 @@
 			<lifeStageAges>
 				<li>
 					<def>AnimalAdult</def>
-					<minAge>0</minAge>
 					<soundWounded>Pawn_Dryad_Barkskin_Wounded</soundWounded>
 					<soundCall>Pawn_Dryad_Barkskin_Call</soundCall>
 				</li>
 			</lifeStageAges>
 		</race>
 	</ThingDef>
-
+	
 	<PawnKindDef ParentName="AwakenedDryadKindBase">
-		<defName>VDE_AwakenedDryad_Barkskin</defName>
+		<defName>Dryad_Barkskin_Awakened</defName>
 		<label>awakened barkskin dryad</label>
-		<race>VDE_AwakenedDryad_Barkskin</race>
+		<race>Dryad_Barkskin_Awakened</race>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
@@ -286,13 +282,13 @@
 			</li>
 		</lifeStages>
 	</PawnKindDef>
-
+	
 	<!-- Awakened Woodmaker -->
-
+	
 	<ThingDef ParentName="AwakenedDryadBase">
-		<defName>VDE_AwakenedDryad_Woodmaker</defName>
+		<defName>Dryad_Woodmaker_Awakened</defName>
 		<label>awakened woodmaker dryad</label>
-		<description>A slow, bumbling caste of dryad which specializes in wood production. Its awakening has accelerated the wood-like material production and instilled a motherly instinct to create nests made of numerous twigs.\n\nAwakened dryads have both advantages and disadvantages compared to their bound relatives. While more proficient, specialized and unshackled, they can neither morph nor receive nourishment from a queen, resulting in a very limited lifespan.</description>
+		<description>A slow, bumbling caste of dryad which specializes in wood production. It's awakening has accelerated the wood-like material production and instilled a motherly instinct to create nests made of numerous twigs.\n\nAwakened dryads have both advantages and disadvantages compared to their bound relatives. While more proficient, specialized and unshackled, they can neither morph nor receive nourishment from a queen, resulting in a very limited lifespan.</description>
 		<statBases>
 			<MoveSpeed>1.5</MoveSpeed>
 		</statBases>
@@ -316,23 +312,22 @@
 			<lifeStageAges>
 				<li>
 					<def>AnimalAdult</def>
-					<minAge>0</minAge>
 					<soundWounded>Pawn_Dryad_Woodmaker_Wounded</soundWounded>
 					<soundCall>Pawn_Dryad_Woodmaker_Call</soundCall>
 				</li>
 			</lifeStageAges>
 		</race>
 	</ThingDef>
-
+	
 	<PawnKindDef ParentName="AwakenedDryadKindBase">
-		<defName>VDE_AwakenedDryad_Woodmaker</defName>
+		<defName>Dryad_Woodmaker_Awakened</defName>
 		<label>awakened woodmaker dryad</label>
-		<race>VDE_AwakenedDryad_Woodmaker</race>
+		<race>Dryad_Woodmaker_Awakened</race>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
 					<texPath>Things/Pawn/Animal/DryadAwakenedWoodmaker/DryadAwakenedWoodmaker</texPath>
-					<drawSize>4</drawSize>
+					<drawSize>3</drawSize>
 					<shadowData>
 						<volume>(0.8, 0.6, 0.6)</volume>
 						<offset>(0,0,-0.3)</offset>
@@ -340,18 +335,18 @@
 				</bodyGraphicData>
 				<dessicatedBodyGraphicData>
 					<texPath>Things/Pawn/Animal/DryadAwakenedWoodmaker/Dessicated_DryadAwakenedWoodmaker</texPath>
-					<drawSize>4</drawSize>
+					<drawSize>3</drawSize>
 				</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
 	</PawnKindDef>
-
+	
 	<!-- Awakened Medicinemaker -->
-
+	
 	<ThingDef ParentName="AwakenedDryadBase">
-		<defName>VDE_AwakenedDryad_Medicinemaker</defName>
+		<defName>Dryad_Medicinemaker_Awakened</defName>
 		<label>awakened medicinemaker dryad</label>
-		<description>A dryad caste specialized in medicine production. Its awakening has accelerated the herbal production and gives them a large nodule that slowly accumulated neutroamine, which can be milked when full.\n\nAwakened dryads have both advantages and disadvantages compared to their bound relatives. While more proficient, specialized and unshackled, they can neither morph nor receive nourishment from a queen, resulting in a very limited lifespan.</description>
+		<description>A dryad caste specialized in medicine production. It's awakening has accelerated the herbal production and gives them a large nodule that slowly accumulated neutroamine, which can be milked when full.\n\nAwakened dryads have both advantages and disadvantages compared to their bound relatives. While more proficient, specialized and unshackled, they can neither morph nor receive nourishment from a queen, resulting in a very limited lifespan.</description>
 		<statBases>
 			<MoveSpeed>3.2</MoveSpeed>
 		</statBases>
@@ -376,18 +371,17 @@
 			<lifeStageAges>
 				<li>
 					<def>AnimalAdult</def>
-					<minAge>0</minAge>
 					<soundWounded>Pawn_Dryad_Medicinemaker_Wounded</soundWounded>
 					<soundCall>Pawn_Dryad_Medicinemaker_Call</soundCall>
 				</li>
 			</lifeStageAges>
 		</race>
 	</ThingDef>
-
+	
 	<PawnKindDef ParentName="AwakenedDryadKindBase">
-		<defName>VDE_AwakenedDryad_Medicinemaker</defName>
+		<defName>Dryad_Medicinemaker_Awakened</defName>
 		<label>awakened medicinemaker dryad</label>
-		<race>VDE_AwakenedDryad_Medicinemaker</race>
+		<race>Dryad_Medicinemaker_Awakened</race>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
@@ -405,13 +399,13 @@
 			</li>
 		</lifeStages>
 	</PawnKindDef>
-
+	
 	<!-- Awakened Berrymaker -->
-
+	
 	<ThingDef ParentName="AwakenedDryadBase">
-		<defName>VDE_AwakenedDryad_Berrymaker</defName>
+		<defName>Dryad_Berrymaker_Awakened</defName>
 		<label>awakened berrymaker dryad</label>
-		<description>A dryad caste specialized in food production. Its awakening has accelerated the berry production and instills an instinct to bury parts of its peeling hide that are entirely similar to regular berry bushes.\n\nAwakened dryads have both advantages and disadvantages compared to their bound relatives. While more proficient, specialized and unshackled, they can neither morph nor receive nourishment from a queen, resulting in a very limited lifespan.</description>
+		<description>A dryad caste specialized in food production. It's awakening has accelerated the berry production and instills an instinct to bury parts of its peeling hide that are entirely similar to regular berry bushes.\n\nAwakened dryads have both advantages and disadvantages compared to their bound relatives. While more proficient, specialized and unshackled, they can neither morph nor receive nourishment from a queen, resulting in a very limited lifespan.</description>
 		<statBases>
 			<MoveSpeed>3.2</MoveSpeed>
 		</statBases>
@@ -460,18 +454,17 @@
 			<lifeStageAges>
 				<li>
 					<def>AnimalAdult</def>
-					<minAge>0</minAge>
 					<soundWounded>Pawn_Dryad_Berrymaker_Wounded</soundWounded>
 					<soundCall>Pawn_Dryad_Berrymaker_Call</soundCall>
 				</li>
 			</lifeStageAges>
 		</race>
 	</ThingDef>
-
+	
 	<PawnKindDef ParentName="AwakenedDryadKindBase">
-		<defName>VDE_AwakenedDryad_Berrymaker</defName>
+		<defName>Dryad_Berrymaker_Awakened</defName>
 		<label>awakened berrymaker dryad</label>
-		<race>VDE_AwakenedDryad_Berrymaker</race>
+		<race>Dryad_Berrymaker_Awakened</race>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
@@ -489,24 +482,20 @@
 			</li>
 		</lifeStages>
 	</PawnKindDef>
-
+	
 	<!-- Awakened Stonedigger -->
-
+	
 	<ThingDef ParentName="AwakenedDryadBase">
-		<defName>VDE_AwakenedDryad_Stonedigger</defName>
+		<defName>VDE_Dryad_Stonedigger_Awakened</defName>
 		<label>awakened stonedigger dryad</label>
-		<description>An extremely easy-going caste of dryad which specializes in finding stone chunks. Its awakening has instilled a sense of awe and strengthened pincers, drawing envy from stone ruins and carving excavated stone chunks into blocks to build a better shell.\n\nAwakened dryads have both advantages and disadvantages compared to their bound relatives. While more proficient, specialized and unshackled, they can neither morph nor receive nourishment from a queen, resulting in a very limited lifespan.</description>
+		<description>An extremely easy-going caste of dryad which specializes in finding stone chunks. It's awakening has instilled a sense of awe and strengthened pincers, drawing envy from stone ruins and carving excavated stone chunks into blocks to build a better shell.\n\nAwakened dryads have both advantages and disadvantages compared to their bound relatives. While more proficient, specialized and unshackled, they can neither morph nor receive nourishment from a queen, resulting in a very limited lifespan.</description>
 		<statBases>
 			<MoveSpeed>2.6</MoveSpeed>
 		</statBases>
 		<comps>
 			<li Class="AnimalBehaviours.CompProperties_DigPeriodically">
-				<customThingToDig>
-
-				</customThingToDig>
-				<customAmountToDig>
-
-				</customAmountToDig>
+				<customThingToDig/>
+				<customAmountToDig/>
 				<ticksToDig>60000</ticksToDig>
 				<onlyWhenTamed>true</onlyWhenTamed>
 				<digBiomeRocks>true</digBiomeRocks>
@@ -520,18 +509,17 @@
 			<lifeStageAges>
 				<li>
 					<def>AnimalAdult</def>
-					<minAge>0</minAge>
 					<soundWounded>Pawn_Dryad_Barkskin_Wounded</soundWounded>
 					<soundCall>Pawn_Dryad_Barkskin_Call</soundCall>
 				</li>
 			</lifeStageAges>
 		</race>
 	</ThingDef>
-
+	
 	<PawnKindDef ParentName="AwakenedDryadKindBase">
-		<defName>VDE_AwakenedDryad_Stonedigger</defName>
+		<defName>VDE_Dryad_Stonedigger_Awakened</defName>
 		<label>awakened stonedigger dryad</label>
-		<race>VDE_AwakenedDryad_Stonedigger</race>
+		<race>VDE_Dryad_Stonedigger_Awakened</race>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
@@ -549,13 +537,13 @@
 			</li>
 		</lifeStages>
 	</PawnKindDef>
-
+	
 	<!-- Awakened Nectarmaker -->
-
+	
 	<ThingDef ParentName="AwakenedDryadBase">
-		<defName>VDE_AwakenedDryad_Nectarmaker</defName>
+		<defName>VDE_Dryad_Nectarmaker_Awakened</defName>
 		<label>awakened nectarmaker dryad</label>
-		<description>A curious dryad caste specialized in ambrosia production. Its awakening has accelerated the ambrosia production and allows it to permanently root itself, transforming into a hardy Ambrosia Palm tree.\n\nAwakened dryads have both advantages and disadvantages compared to their bound relatives. While more proficient, specialized and unshackled, they can neither morph nor receive nourishment from a queen, resulting in a very limited lifespan.</description>
+		<description>A curious dryad caste specialized in ambrosia production. It's awakening has accelerated the ambrosia production and allows it to permanently root itself, transforming into a hardy Ambrosia Palm tree.\n\nAwakened dryads have both advantages and disadvantages compared to their bound relatives. While more proficient, specialized and unshackled, they can neither morph nor receive nourishment from a queen, resulting in a very limited lifespan.</description>
 		<statBases>
 			<MoveSpeed>3</MoveSpeed>
 		</statBases>
@@ -581,18 +569,17 @@
 			<lifeStageAges>
 				<li>
 					<def>AnimalAdult</def>
-					<minAge>0</minAge>
 					<soundWounded>Pawn_Dryad_Wounded</soundWounded>
 					<soundCall>Pawn_Dryad_Call</soundCall>
 				</li>
 			</lifeStageAges>
 		</race>
 	</ThingDef>
-
+	
 	<PawnKindDef ParentName="AwakenedDryadKindBase">
-		<defName>VDE_AwakenedDryad_Nectarmaker</defName>
+		<defName>VDE_Dryad_Nectarmaker_Awakened</defName>
 		<label>awakened nectarmaker dryad</label>
-		<race>VDE_AwakenedDryad_Nectarmaker</race>
+		<race>VDE_Dryad_Nectarmaker_Awakened</race>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
@@ -610,13 +597,13 @@
 			</li>
 		</lifeStages>
 	</PawnKindDef>
-
+	
 	<!-- Awakened Spitter -->
-
+	
 	<ThingDef ParentName="AwakenedDryadBase">
-		<defName>VDE_AwakenedDryad_Spitter</defName>
+		<defName>VDE_Dryad_Spitter_Awakened</defName>
 		<label>awakened spitter dryad</label>
-		<description>A dryad caste specialized in territorialism and can launch ranged acid projectiles. Its awakening has improved their range and adds large acid reservoirs that explode when the dryad dies.\n\nAwakened dryads have both advantages and disadvantages compared to their bound relatives. While more proficient, specialized and unshackled, they can neither morph nor receive nourishment from a queen, resulting in a very limited lifespan.</description>
+		<description>A dryad caste specialized in territorialism and can launch ranged acid projectiles. It's awakening has improved their range and adds large acid reservoirs that explode when the dryad dies.\n\nAwakened dryads have both advantages and disadvantages compared to their bound relatives. While more proficient, specialized and unshackled, they can neither morph nor receive nourishment from a queen, resulting in a very limited lifespan.</description>
 		<statBases>
 			<MoveSpeed>4</MoveSpeed>
 		</statBases>
@@ -663,7 +650,6 @@
 			<lifeStageAges>
 				<li>
 					<def>AnimalAdult</def>
-					<minAge>0</minAge>
 					<soundWounded>Pawn_Dryad_Clawer_Wounded</soundWounded>
 					<soundCall>Pawn_Dryad_Clawer_Call</soundCall>
 				</li>
@@ -700,11 +686,11 @@
 			</li>
 		</tools>
 	</ThingDef>
-
+	
 	<PawnKindDef ParentName="AwakenedDryadKindBase">
-		<defName>VDE_AwakenedDryad_Spitter</defName>
+		<defName>VDE_Dryad_Spitter_Awakened</defName>
 		<label>awakened spitter dryad</label>
-		<race>VDE_AwakenedDryad_Spitter</race>
+		<race>VDE_Dryad_Spitter_Awakened</race>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
@@ -722,24 +708,23 @@
 			</li>
 		</lifeStages>
 	</PawnKindDef>
-
+	
 	<!-- Awakened Gaubricmaker -->
-
+	
 	<ThingDef ParentName="AwakenedDryadBase">
-		<defName>VDE_AwakenedDryad_Gaubricmaker</defName>
+		<defName>VDE_Dryad_Gaubricmaker_Awakened</defName>
 		<label>awakened gaubricmaker dryad</label>
-		<description>A caste of dryad which specializes in producing a unique shaggy, leather-like material. Its awakening has accelerated the fabric production and lengthens the shagginess, turning it an adorable, living wonder-mop that cleans up messes.\n\nAwakened dryads have both advantages and disadvantages compared to their bound relatives. While more proficient, specialized and unshackled, they can neither morph nor receive nourishment from a queen, resulting in a very limited lifespan.</description>
+		<description>A caste of dryad which specializes in producing a unique shaggy, leather-like material. It's awakening has accelerated the fabric production and lengthens the shagginess, turning it into an adorable, living wonder-mop that cleans up messes.\n\nAwakened dryads have both advantages and disadvantages compared to their bound relatives. While more proficient, specialized and unshackled, they can neither morph nor receive nourishment from a queen, resulting in a very limited lifespan.</description>
 		<statBases>
 			<MoveSpeed>4</MoveSpeed>
 			<FilthRate>0</FilthRate>
 		</statBases>
 		<comps>
-			<li Class="CompProperties_Spawner">
-				<thingToSpawn>VDE_Gaubric</thingToSpawn>
-				<spawnCount>45</spawnCount>
-				<spawnIntervalRange>300000</spawnIntervalRange>
-				<writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
-				<showMessageIfOwned>true</showMessageIfOwned>
+			<li Class="AnimalBehaviours.CompProperties_AnimalProduct">
+				<resourceDef>VDE_Gaubric</resourceDef>
+				<gatheringIntervalDays>2</gatheringIntervalDays>
+				<resourceAmount>45</resourceAmount>
+				<customResourceString>VDE_GaubricDesc</customResourceString>
 			</li>
 		</comps>
 		<race>
@@ -748,18 +733,17 @@
 			<lifeStageAges>
 				<li>
 					<def>AnimalAdult</def>
-					<minAge>0</minAge>
 					<soundWounded>Pawn_Dryad_Gaumaker_Wounded</soundWounded>
 					<soundCall>Pawn_Dryad_Gaumaker_Call</soundCall>
 				</li>
 			</lifeStageAges>
 		</race>
 	</ThingDef>
-
+	
 	<PawnKindDef ParentName="AwakenedDryadKindBase">
-		<defName>VDE_AwakenedDryad_Gaubricmaker</defName>
+		<defName>VDE_Dryad_Gaubricmaker_Awakened</defName>
 		<label>awakened gaubricmaker dryad</label>
-		<race>VDE_AwakenedDryad_Gaubricmaker</race>
+		<race>VDE_Dryad_Gaubricmaker_Awakened</race>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
@@ -777,13 +761,13 @@
 			</li>
 		</lifeStages>
 	</PawnKindDef>
-
+	
 	<!-- Awakened Agavemaker -->
-
+	
 	<ThingDef ParentName="AwakenedDryadBase">
-		<defName>VDE_AwakenedDryad_Agavemaker</defName>
+		<defName>VDE_Dryad_Agavemaker_Awakened</defName>
 		<label>awakened agavemaker dryad</label>
-		<description>A dryad caste specialized in food production. Its awakening has accelerated the agave production and instills an instinct to bury parts of its peeling hide that are entirely similar to regular agave plants.\n\nAwakened dryads have both advantages and disadvantages compared to their bound relatives. While more proficient, specialized and unshackled, they can neither morph nor receive nourishment from a queen, resulting in a very limited lifespan.</description>
+		<description>A dryad caste specialized in food production. It's awakening has accelerated the agave production and instills an instinct to bury parts of its peeling hide that are entirely similar to regular agave plants.\n\nAwakened dryads have both advantages and disadvantages compared to their bound relatives. While more proficient, specialized and unshackled, they can neither morph nor receive nourishment from a queen, resulting in a very limited lifespan.</description>
 		<statBases>
 			<MoveSpeed>3.2</MoveSpeed>
 		</statBases>
@@ -832,18 +816,17 @@
 			<lifeStageAges>
 				<li>
 					<def>AnimalAdult</def>
-					<minAge>0</minAge>
 					<soundWounded>Pawn_Dryad_Berrymaker_Wounded</soundWounded>
 					<soundCall>Pawn_Dryad_Berrymaker_Call</soundCall>
 				</li>
 			</lifeStageAges>
 		</race>
 	</ThingDef>
-
+	
 	<PawnKindDef ParentName="AwakenedDryadKindBase">
-		<defName>VDE_AwakenedDryad_Agavemaker</defName>
+		<defName>VDE_Dryad_Agavemaker_Awakened</defName>
 		<label>awakened agavemaker dryad</label>
-		<race>VDE_AwakenedDryad_Agavemaker</race>
+		<race>VDE_Dryad_Agavemaker_Awakened</race>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
@@ -861,13 +844,13 @@
 			</li>
 		</lifeStages>
 	</PawnKindDef>
-
+	
 	<!-- Awakened Voltaic -->
-
+	
 	<ThingDef ParentName="AwakenedDryadBase">
-		<defName>VDE_AwakenedDryad_Voltaic</defName>
+		<defName>VDE_Dryad_Voltaic_Awakened</defName>
 		<label>awakened voltaic dryad</label>
-		<description>A dryad caste that naturally generates electricity. Its awakening has <!-- can charge batteries and its attacks cause electromagnetic disruptions -->.\n\nAwakened dryads have both advantages and disadvantages compared to their bound relatives. While more proficient, specialized and unshackled, they can neither morph nor receive nourishment from a queen, resulting in a very limited lifespan.</description>
+		<description>A dryad caste that naturally generates electricity. It's awakening has increased it's voltage, accelerating it's ability to charge batteries.\n\nAwakened dryads have both advantages and disadvantages compared to their bound relatives. While more proficient, specialized and unshackled, they can neither morph nor receive nourishment from a queen, resulting in a very limited lifespan.</description>
 		<statBases>
 			<MoveSpeed>3.2</MoveSpeed>
 		</statBases>
@@ -956,6 +939,9 @@
 			</li>
 		</tools>
 		<comps>
+			<li Class="AnimalBehaviours.CompProperties_Draftable">
+				<makeNonFleeingToo>true</makeNonFleeingToo>
+			</li>
 			<li Class="AnimalBehaviours.CompProperties_Electrified">
 				<electroRate>80</electroRate>
 				<electroRadius>5</electroRadius>
@@ -1002,18 +988,17 @@
 			<lifeStageAges>
 				<li>
 					<def>AnimalAdult</def>
-					<minAge>0</minAge>
 					<soundWounded>Pawn_Dryad_Medicinemaker_Wounded</soundWounded>
 					<soundCall>Pawn_Dryad_Medicinemaker_Call</soundCall>
 				</li>
 			</lifeStageAges>
 		</race>
 	</ThingDef>
-
+	
 	<PawnKindDef ParentName="AwakenedDryadKindBase">
-		<defName>VDE_AwakenedDryad_Voltaic</defName>
+		<defName>VDE_Dryad_Voltaic_Awakened</defName>
 		<label>awakened voltaic dryad</label>
-		<race>VDE_AwakenedDryad_Voltaic</race>
+		<race>VDE_Dryad_Voltaic_Awakened</race>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>

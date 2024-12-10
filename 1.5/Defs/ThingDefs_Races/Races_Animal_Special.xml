@@ -14,22 +14,15 @@
 		</statBases>
 		<comps>
 			<li Class="AnimalBehaviours.CompProperties_DigPeriodically">
-				<customThingToDig>			
+				<customThingToDig>
 					
 				</customThingToDig>
-				<customAmountToDig>				
+				<customAmountToDig>
 					
 				</customAmountToDig>
 				<ticksToDig>60000</ticksToDig>
 				<onlyWhenTamed>true</onlyWhenTamed>
 				<digBiomeRocks>true</digBiomeRocks>
-			</li>
-			<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_PawnMerge">
-				<requiredCount>3</requiredCount>
-				<podToBuild>VDE_StonediggerAwakeningCocoon</podToBuild>
-				<gizmoImage>Things/Building/UpgradeStonedigger</gizmoImage>
-				<gizmoLabel>VDE_Awaken</gizmoLabel>
-				<gizmoDesc>VDE_AwakenDesc</gizmoDesc>
 			</li>
 		</comps>
 		<race>
@@ -90,23 +83,14 @@
 				<commonality>.8</commonality>
 			</li>
 		</verbs>
-		<comps>
-			<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_PawnMerge">
-				<requiredCount>3</requiredCount>
-				<podToBuild>VDE_SpitterAwakeningCocoon</podToBuild>
-				<gizmoImage>Things/Building/UpgradeSpitter</gizmoImage>
-				<gizmoLabel>VDE_Awaken</gizmoLabel>
-				<gizmoDesc>VDE_AwakenDesc</gizmoDesc>
-			</li>
-		</comps>
 		<race>
-      <body>Snake</body>
+			<body>Snake</body>
 			<useMeatFrom>Dryad_Basic</useMeatFrom>
 			<lifeStageAges>
 				<li>
 					<def>AnimalAdult</def>
-          <soundWounded>Pawn_Dryad_Clawer_Wounded</soundWounded>
-          <soundCall>Pawn_Dryad_Clawer_Call</soundCall>
+					<soundWounded>Pawn_Dryad_Clawer_Wounded</soundWounded>
+					<soundCall>Pawn_Dryad_Clawer_Call</soundCall>
 				</li>
 			</lifeStageAges>
 			<baseHealthScale>0.6</baseHealthScale>
@@ -120,36 +104,36 @@
 				<li>Help</li>
 			</untrainableTags>
 		</race>
-    <tools Inherit="False">
-      <li>
-        <label>venom-fangs</label>
-        <capacities>
-          <li>ToxicBite</li>
-        </capacities>
-        <power>9</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
-        <surpriseAttack>
-          <extraMeleeDamages>
-            <li>
-              <def>Stun</def>
-              <amount>14</amount>
-            </li>
-          </extraMeleeDamages>
-        </surpriseAttack>
-      </li>
-      <li>
-        <label>head</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>4</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-        <chanceFactor>0.2</chanceFactor>
-      </li>
-    </tools>
+		<tools Inherit="False">
+			<li>
+				<label>venom-fangs</label>
+				<capacities>
+					<li>ToxicBite</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>14</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>4</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
 	</ThingDef>
 
 	<PawnKindDef ParentName="DryadKindBase">
@@ -186,21 +170,14 @@
 				<resourceAmount>45</resourceAmount>
 				<customResourceString>VDE_GaubricDesc</customResourceString>
 			</li>
-			<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_PawnMerge">
-				<requiredCount>3</requiredCount>
-				<podToBuild>VDE_GaubricmakerAwakeningCocoon</podToBuild>
-				<gizmoImage>Things/Building/UpgradeGaubricmaker</gizmoImage>
-				<gizmoLabel>VDE_Awaken</gizmoLabel>
-				<gizmoDesc>VDE_AwakenDesc</gizmoDesc>
-			</li>
 		</comps>
 		<race>
 			<useMeatFrom>Dryad_Basic</useMeatFrom>
 			<lifeStageAges>
 				<li>
 					<def>AnimalAdult</def>
-          <soundWounded>Pawn_Dryad_Gaumaker_Wounded</soundWounded>
-          <soundCall>Pawn_Dryad_Gaumaker_Call</soundCall>
+					<soundWounded>Pawn_Dryad_Gaumaker_Wounded</soundWounded>
+					<soundCall>Pawn_Dryad_Gaumaker_Call</soundCall>
 				</li>
 			</lifeStageAges>
 			<baseHealthScale>0.6</baseHealthScale>
@@ -242,21 +219,14 @@
 				<writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
 				<showMessageIfOwned>true</showMessageIfOwned>
 			</li>
-			<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_PawnMerge">
-				<requiredCount>3</requiredCount>
-				<podToBuild>VDE_NectarmakerAwakeningCocoon</podToBuild>
-				<gizmoImage>Things/Building/UpgradeNectarmaker</gizmoImage>
-				<gizmoLabel>VDE_Awaken</gizmoLabel>
-				<gizmoDesc>VDE_AwakenDesc</gizmoDesc>
-			</li>
 		</comps>
 		<race>
 			<useMeatFrom>Dryad_Basic</useMeatFrom>
 			<lifeStageAges>
 				<li>
 					<def>AnimalAdult</def>
-          <soundWounded>Pawn_Dryad_Wounded</soundWounded>
-          <soundCall>Pawn_Dryad_Call</soundCall>
+					<soundWounded>Pawn_Dryad_Wounded</soundWounded>
+					<soundCall>Pawn_Dryad_Call</soundCall>
 				</li>
 			</lifeStageAges>
 		</race>
@@ -280,88 +250,81 @@
 		</lifeStages>
 	</PawnKindDef>
 
-  <!-- Agavemaker -->
+	<!-- Agavemaker -->
 
-  <ThingDef ParentName="DryadBase">
-    <defName>VDE_Dryad_Agavemaker</defName>
-    <label>agavemaker dryad</label>
-    <description>A dryad caste specialized in food production. Together with its Gauranlen tree, this dryad can generate nourishing agave on an ongoing basis. However, it is slow and ineffective at work or combat.\n\nIn general, dryads are mammal-like creatures that have a symbiotic relationship with the Gauranlen tree. They reproduce together with their tree, which contains a hidden dryad queen. Dryads can morph into various specialized castes.</description>
-    <descriptionHyperlinks>
-      <ThingDef>RawAgave</ThingDef>
-    </descriptionHyperlinks>
-    <statBases>
-      <MoveSpeed>3</MoveSpeed>
-    </statBases>
-    <comps>
-			<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_PawnMerge">
-				<requiredCount>3</requiredCount>
-				<podToBuild>VDE_AgavemakerAwakeningCocoon</podToBuild>
-				<gizmoImage>Things/Building/UpgradeAgavemaker</gizmoImage>
-				<gizmoLabel>VDE_Awaken</gizmoLabel>
-				<gizmoDesc>VDE_AwakenDesc</gizmoDesc>
+	<ThingDef ParentName="DryadBase">
+		<defName>VDE_Dryad_Agavemaker</defName>
+		<label>agavemaker dryad</label>
+		<description>A dryad caste specialized in food production. Together with its Gauranlen tree, this dryad can generate nourishing agave on an ongoing basis. However, it is slow and ineffective at work or combat.\n\nIn general, dryads are mammal-like creatures that have a symbiotic relationship with the Gauranlen tree. They reproduce together with their tree, which contains a hidden dryad queen. Dryads can morph into various specialized castes.</description>
+		<descriptionHyperlinks>
+			<ThingDef>RawAgave</ThingDef>
+		</descriptionHyperlinks>
+		<statBases>
+			<MoveSpeed>3</MoveSpeed>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Spawner">
+				<thingToSpawn>RawAgave</thingToSpawn>
+				<spawnCount>40</spawnCount>
+				<spawnIntervalRange>120000</spawnIntervalRange>
+				<writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
+				<showMessageIfOwned>true</showMessageIfOwned>
 			</li>
-      <li Class="CompProperties_Spawner">
-        <thingToSpawn>RawAgave</thingToSpawn>
-        <spawnCount>40</spawnCount>
-        <spawnIntervalRange>120000</spawnIntervalRange>
-        <writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
-        <showMessageIfOwned>true</showMessageIfOwned>
-      </li>
-    </comps>
-    <race>
-      <useMeatFrom>Dryad_Basic</useMeatFrom>
-      <lifeStageAges>
-        <li>
-          <def>AnimalAdult</def>
-          <soundWounded>Pawn_Dryad_Berrymaker_Wounded</soundWounded>
-          <soundCall>Pawn_Dryad_Berrymaker_Call</soundCall>
-        </li>
-      </lifeStageAges>
-      <headPosPerRotation>
-        <li>(0.0, 0, 0.1)</li>
-        <li>(0.15, 0, 0.02)</li>
-        <li>(0, 0, -0.08)</li>
-        <li>(-0.15, 0, 0.02)</li>
-      </headPosPerRotation>
-    </race>
-  </ThingDef>
+		</comps>
+		<race>
+			<useMeatFrom>Dryad_Basic</useMeatFrom>
+			<lifeStageAges>
+				<li>
+					<def>AnimalAdult</def>
+					<soundWounded>Pawn_Dryad_Berrymaker_Wounded</soundWounded>
+					<soundCall>Pawn_Dryad_Berrymaker_Call</soundCall>
+				</li>
+			</lifeStageAges>
+			<headPosPerRotation>
+				<li>(0.0, 0, 0.1)</li>
+				<li>(0.15, 0, 0.02)</li>
+				<li>(0, 0, -0.08)</li>
+				<li>(-0.15, 0, 0.02)</li>
+			</headPosPerRotation>
+		</race>
+	</ThingDef>
 
-  <PawnKindDef ParentName="DryadKindBase">
-    <defName>VDE_Dryad_Agavemaker</defName>
-    <label>agavemaker dryad</label>
-    <race>VDE_Dryad_Agavemaker</race>
-    <lifeStages>
-      <li>
-        <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/DryadAgavemaker/DryadAgavemaker</texPath>
-          <drawSize>1.5</drawSize>
-        </bodyGraphicData>
-        <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/DryadAgavemaker/Dessicated_DryadAgavemaker</texPath>
-          <drawSize>1.5</drawSize>
-        </dessicatedBodyGraphicData>
-      </li>
-    </lifeStages>
-  </PawnKindDef>
+	<PawnKindDef ParentName="DryadKindBase">
+		<defName>VDE_Dryad_Agavemaker</defName>
+		<label>agavemaker dryad</label>
+		<race>VDE_Dryad_Agavemaker</race>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/DryadAgavemaker/DryadAgavemaker</texPath>
+					<drawSize>1.5</drawSize>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/DryadAgavemaker/Dessicated_DryadAgavemaker</texPath>
+					<drawSize>1.5</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
 
 	<!-- Voltaic -->
 
-  <ThingDef ParentName="DryadBase">
-    <defName>VDE_Dryad_Voltaic</defName>
-    <label>voltaic dryad</label>
-    <description>A dryad caste that naturally generates electricity. Together with its Gauranlen tree, this dryad can charge batteries and its attacks cause electromagnetic disruptions.\n\nIn general, dryads are mammal-like creatures that have a symbiotic relationship with the Gauranlen tree. They reproduce together with their tree, which contains a hidden dryad queen. Dryads can morph into various specialized castes.</description>
-    <statBases>
-      <MoveSpeed>3</MoveSpeed>
-    </statBases>
-    <race>
-      <useMeatFrom>Dryad_Basic</useMeatFrom>
-      <lifeStageAges>
-        <li>
-          <def>AnimalAdult</def>
+	<ThingDef ParentName="DryadBase">
+		<defName>VDE_Dryad_Voltaic</defName>
+		<label>voltaic dryad</label>
+		<description>A dryad caste that naturally generates electricity. Together with its Gauranlen tree, this dryad can charge batteries and its attacks cause electromagnetic disruptions.\n\nIn general, dryads are mammal-like creatures that have a symbiotic relationship with the Gauranlen tree. They reproduce together with their tree, which contains a hidden dryad queen. Dryads can morph into various specialized castes.</description>
+		<statBases>
+			<MoveSpeed>3</MoveSpeed>
+		</statBases>
+		<race>
+			<useMeatFrom>Dryad_Basic</useMeatFrom>
+			<lifeStageAges>
+				<li>
+					<def>AnimalAdult</def>
 					<soundWounded>Pawn_Dryad_Barkskin_Wounded</soundWounded>
 					<soundCall>Pawn_Dryad_Barkskin_Call</soundCall>
-        </li>
-      </lifeStageAges>
+				</li>
+			</lifeStageAges>
 			<trainability>Intermediate</trainability>
 			<trainableTags>
 				<li>Basic</li>
@@ -371,105 +334,98 @@
 				<li>Work</li>
 				<li>Help</li>
 			</untrainableTags>
-      <headPosPerRotation>
-        <li>(0.0, 0, 0.1)</li>
-        <li>(0.15, 0, 0.02)</li>
-        <li>(0, 0, -0.08)</li>
-        <li>(-0.15, 0, 0.02)</li>
-      </headPosPerRotation>
-    </race>
-    <tools Inherit="False">
-      <li>
-        <label>left claw</label>
-        <labelNoLocation>claw</labelNoLocation>
-        <capacities>
-          <li>Scratch</li>
-        </capacities>
-        <power>8</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
-        <surpriseAttack>
-          <extraMeleeDamages>
-            <li>
-              <def>Stun</def>
-              <amount>14</amount>
-            </li>
-          </extraMeleeDamages>
-        </surpriseAttack>
-        <extraMeleeDamages>
-          <li>
-            <def>EMP</def>
-            <amount>9</amount>
-          </li>
-        </extraMeleeDamages>
-      </li>
-      <li>
-        <label>right claw</label>
-        <labelNoLocation>claw</labelNoLocation>
-        <capacities>
-          <li>Scratch</li>
-        </capacities>
-        <power>8</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
-        <surpriseAttack>
-          <extraMeleeDamages>
-            <li>
-              <def>Stun</def>
-              <amount>14</amount>
-            </li>
-          </extraMeleeDamages>
-        </surpriseAttack>
-        <extraMeleeDamages>
-          <li>
-            <def>EMP</def>
-            <amount>9</amount>
-          </li>
-        </extraMeleeDamages>
-      </li>
-      <li>
-        <capacities>
-          <li>Bite</li>
-        </capacities>
-        <power>9</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
-        <chanceFactor>0.9</chanceFactor>
-        <surpriseAttack>
-          <extraMeleeDamages>
-            <li>
-              <def>Stun</def>
-              <amount>14</amount>
-            </li>
-          </extraMeleeDamages>
-        </surpriseAttack>
-        <extraMeleeDamages>
-          <li>
-            <def>EMP</def>
-            <amount>9</amount>
-          </li>
-        </extraMeleeDamages>
-      </li>
-      <li>
-        <label>head</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>4</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-        <chanceFactor>0.2</chanceFactor>
-      </li>
-    </tools>
-    <comps>
-			<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_PawnMerge">
-				<requiredCount>3</requiredCount>
-				<podToBuild>VDE_VoltaicAwakeningCocoon</podToBuild>
-				<gizmoImage>Things/Building/UpgradeVoltaic</gizmoImage>
-				<gizmoLabel>VDE_Awaken</gizmoLabel>
-				<gizmoDesc>VDE_AwakenDesc</gizmoDesc>
+			<headPosPerRotation>
+				<li>(0.0, 0, 0.1)</li>
+				<li>(0.15, 0, 0.02)</li>
+				<li>(0, 0, -0.08)</li>
+				<li>(-0.15, 0, 0.02)</li>
+			</headPosPerRotation>
+		</race>
+		<tools Inherit="False">
+			<li>
+				<label>left claw</label>
+				<labelNoLocation>claw</labelNoLocation>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>14</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+				<extraMeleeDamages>
+					<li>
+						<def>EMP</def>
+						<amount>9</amount>
+					</li>
+				</extraMeleeDamages>
 			</li>
+			<li>
+				<label>right claw</label>
+				<labelNoLocation>claw</labelNoLocation>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>14</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+				<extraMeleeDamages>
+					<li>
+						<def>EMP</def>
+						<amount>9</amount>
+					</li>
+				</extraMeleeDamages>
+			</li>
+			<li>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<chanceFactor>0.9</chanceFactor>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>14</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+				<extraMeleeDamages>
+					<li>
+						<def>EMP</def>
+						<amount>9</amount>
+					</li>
+				</extraMeleeDamages>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>4</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<comps>
 			<li Class="AnimalBehaviours.CompProperties_Electrified">
 				<electroRate>40</electroRate>
 				<electroRadius>5</electroRadius>
@@ -498,27 +454,27 @@
 					<li>AA_HexaGelBattery</li>
 					<li>ShipCapacitor</li>
 					<li>ShipCapacitorSmall</li>
-				</batteriesToAffect>			
+				</batteriesToAffect>
 			</li>
-    </comps>
-  </ThingDef>
+		</comps>
+	</ThingDef>
 
-  <PawnKindDef ParentName="DryadKindBase">
-    <defName>VDE_Dryad_Voltaic</defName>
-    <label>voltaic dryad</label>
-    <race>VDE_Dryad_Voltaic</race>
-    <lifeStages>
-      <li>
-        <bodyGraphicData>
-          <texPath>Things/Pawn/Animal/DryadVoltaic/DryadVoltaic</texPath>
-          <drawSize>1.5</drawSize>
-        </bodyGraphicData>
-        <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/DryadVoltaic/Dessicated_DryadVoltaic</texPath>
-          <drawSize>1.5</drawSize>
-        </dessicatedBodyGraphicData>
-      </li>
-    </lifeStages>
-  </PawnKindDef>
+	<PawnKindDef ParentName="DryadKindBase">
+		<defName>VDE_Dryad_Voltaic</defName>
+		<label>voltaic dryad</label>
+		<race>VDE_Dryad_Voltaic</race>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/DryadVoltaic/DryadVoltaic</texPath>
+					<drawSize>1.5</drawSize>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/DryadVoltaic/Dessicated_DryadVoltaic</texPath>
+					<drawSize>1.5</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
 
 </Defs>

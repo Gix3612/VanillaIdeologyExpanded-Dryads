@@ -1,65 +1,44 @@
-﻿
-
+﻿using System;
 using RimWorld;
 using Verse;
-using Verse.Sound;
-using System;
 
 namespace VanillaIdeologyExpanded_Dryads
 {
-    public class HediffComp_PeriodicWounds : HediffComp
+  public class HediffComp_PeriodicWounds : HediffComp
+  {
+    public int checkDownCounter = 0;
+
+    private readonly Random rand = new Random();
+
+    public HediffCompProperties_PeriodicWounds Props => (HediffCompProperties_PeriodicWounds)this.props;
+
+    public override void CompPostTick(ref float severityAdjustment)
     {
-        public int checkDownCounter = 0;
+      checkDownCounter++;
 
-        private System.Random rand = new System.Random();
-
-        public HediffCompProperties_PeriodicWounds Props
+      if (parent.Severity > Props.severityThirdStage)
+      {
+        if (checkDownCounter > Props.mtbWoundsThirdStage)
         {
-            get
-            {
-                return (HediffCompProperties_PeriodicWounds)this.props;
-            }
+          if (rand.NextDouble() < Props.chanceCutThirdStage)
+          {
+            base.Pawn.TakeDamage(new DamageInfo(DamageDefOf.Cut, 2, 0f, -1f, null, null, null, DamageInfo.SourceCategory.ThingOrUnknown));
+          }
+          checkDownCounter = 0;
         }
-
-
-
-        public override void CompPostTick(ref float severityAdjustment)
+      }
+      else if (parent.Severity > Props.severitySecondStage)
+      {
+        if (checkDownCounter > Props.mtbWoundsSecondStage)
         {
-            base.CompPostTick(ref severityAdjustment);
-            
-            checkDownCounter++;
-
-            if (this.parent.Severity > Props.severityThirdStage)
-            {
-                if (checkDownCounter > Props.mtbWoundsThirdStage)
-                {
-                    if (rand.NextDouble() < Props.chanceCutThirdStage)
-                    {
-                        this.parent.pawn.TakeDamage(new DamageInfo(DamageDefOf.Cut, 2, 0f, -1f, null, null, null, DamageInfo.SourceCategory.ThingOrUnknown));
-
-                    }
-                    checkDownCounter = 0;
-                }
-            }
-            else if (this.parent.Severity > Props.severitySecondStage) {
-                if (checkDownCounter > Props.mtbWoundsSecondStage)
-                {
-                    if (rand.NextDouble() < Props.chanceCutSecondStage)
-                    {
-                        this.parent.pawn.TakeDamage(new DamageInfo(DamageDefOf.Cut, 1, 0f, -1f, null, null, null, DamageInfo.SourceCategory.ThingOrUnknown));
-
-                    }
-                    checkDownCounter = 0;
-                }
-            }
-
-                
-
-            
-                
-            
-
+          if (rand.NextDouble() < Props.chanceCutSecondStage)
+          {
+            base.Pawn.TakeDamage(new DamageInfo(DamageDefOf.Cut, 1, 0f, -1f, null, null, null, DamageInfo.SourceCategory.ThingOrUnknown));
+          }
+          checkDownCounter = 0;
         }
+      }
     }
-}
 
+  }
+}

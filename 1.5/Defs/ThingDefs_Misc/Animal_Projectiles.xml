@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-
-
 	<ThingDef ParentName="BaseBullet">
 		<defName>VDE_AcidBolt</defName>
 		<label>acid spit</label>
-		
 		<graphicData>
 			<texPath>Things/Projectiles/DryadSpitter_Spit</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -20,9 +17,5 @@
 			<speed>40</speed>
 		</projectile>
 	</ThingDef>
-
-
-
-
-
+	
 </Defs>

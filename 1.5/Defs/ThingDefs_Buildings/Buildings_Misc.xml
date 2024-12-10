@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<!-- Cocoon Base -->
-
-	<ThingDef Name="VDE_DryadCocoon" Abstract="True">
+	<ThingDef>
+		<defName>VDE_AwakeningCocoon</defName>
+		<label>awakening cocoon</label>
 		<thingClass>ThingWithComps</thingClass>
+		<category>Building</category>
+		<description>A sphere of fibrous plant matter. The dryads inside are slowly merging into a new form. Gauranlen trees grow these spheres to help protect the dryads as they morph.</description>
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<altitudeLayer>Building</altitudeLayer>
 		<tickerType>Normal</tickerType>
+		<building>
+			<deconstructible>false</deconstructible>
+		</building>
 		<graphicData>
+			<texPath>Things/Building/Misc/DryadSphere/DryadSphereBack</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1.3, 1.3)</drawSize>
 		</graphicData>
 		<statBases>
 			<MaxHitPoints>150</MaxHitPoints>
@@ -17,231 +24,44 @@
 		</statBases>
 		<fillPercent>0.5</fillPercent>
 		<selectable>true</selectable>
-	</ThingDef>
-
-	<!-- Carrier -->
-
-	<ThingDef ParentName="VDE_DryadCocoon">
-		<defName>VDE_CarrierAwakeningCocoon</defName>
-		<label>carrier awakening pod</label>
-		<description>An awakened dryad will emerge from this pod in one day.</description>
-		<graphicData>
-			<texPath>Things/Building/UpgradeCarrier</texPath>
-		</graphicData>
 		<comps>
-			<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_SpawnAwakened">
-				<ticksToSpawn>60000</ticksToSpawn>
-				<dryadToSpawn>VDE_AwakenedDryad_Carrier</dryadToSpawn>
+			<li Class="CompProperties_DryadCocoon">
+				<compClass>VanillaIdeologyExpanded_Dryads.CompAwakeningCocoon</compClass>
+				<daysToComplete>1</daysToComplete>
+				<drawContents>true</drawContents>
 			</li>
 		</comps>
 	</ThingDef>
-
-	<!-- Clawer -->
-
-	<ThingDef ParentName="VDE_DryadCocoon">
-		<defName>VDE_ClawerAwakeningCocoon</defName>
-		<label>clawer awakening pod</label>
-		<description>An awakened dryad will emerge from this pod in one day.</description>
-		<graphicData>
-			<texPath>Things/Building/UpgradeClawer</texPath>
-		</graphicData>
-		<comps>
-			<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_SpawnAwakened">
-				<ticksToSpawn>60000</ticksToSpawn>
-				<dryadToSpawn>VDE_AwakenedDryad_Clawer</dryadToSpawn>
-			</li>
-		</comps>
-	</ThingDef>
-
-	<!-- Barkskin -->
-
-	<ThingDef ParentName="VDE_DryadCocoon">
-		<defName>VDE_BarkskinAwakeningCocoon</defName>
-		<label>barkskin awakening pod</label>
-		<description>An awakened dryad will emerge from this pod in one day.</description>
-		<graphicData>
-			<texPath>Things/Building/UpgradeBarkskin</texPath>
-		</graphicData>
-		<comps>
-			<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_SpawnAwakened">
-				<ticksToSpawn>60000</ticksToSpawn>
-				<dryadToSpawn>VDE_AwakenedDryad_Barkskin</dryadToSpawn>
-			</li>
-		</comps>
-	</ThingDef>
-
-	<!-- Woodmaker -->
-
-	<ThingDef ParentName="VDE_DryadCocoon">
-		<defName>VDE_WoodmakerAwakeningCocoon</defName>
-		<label>woodmaker awakening pod</label>
-		<description>An awakened dryad will emerge from this pod in one day.</description>
-		<graphicData>
-			<texPath>Things/Building/UpgradeWoodmaker</texPath>
-		</graphicData>
-		<comps>
-			<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_SpawnAwakened">
-				<ticksToSpawn>60000</ticksToSpawn>
-				<dryadToSpawn>VDE_AwakenedDryad_Woodmaker</dryadToSpawn>
-			</li>
-		</comps>
-	</ThingDef>
-
-	<!-- Medicinemaker -->
-
-	<ThingDef ParentName="VDE_DryadCocoon">
-		<defName>VDE_MedicinemakerAwakeningCocoon</defName>
-		<label>medicinemaker awakening pod</label>
-		<description>An awakened dryad will emerge from this pod in one day.</description>
-		<graphicData>
-			<texPath>Things/Building/UpgradeMedicinemaker</texPath>
-		</graphicData>
-		<comps>
-			<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_SpawnAwakened">
-				<ticksToSpawn>60000</ticksToSpawn>
-				<dryadToSpawn>VDE_AwakenedDryad_Medicinemaker</dryadToSpawn>
-			</li>
-		</comps>
-	</ThingDef>
-
-	<!-- Berrymaker -->
-
-	<ThingDef ParentName="VDE_DryadCocoon">
-		<defName>VDE_BerrymakerAwakeningCocoon</defName>
-		<label>berrymaker awakening pod</label>
-		<description>An awakened dryad will emerge from this pod in one day.</description>
-		<graphicData>
-			<texPath>Things/Building/UpgradeBerrymaker</texPath>
-		</graphicData>
-		<comps>
-			<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_SpawnAwakened">
-				<ticksToSpawn>60000</ticksToSpawn>
-				<dryadToSpawn>VDE_AwakenedDryad_Berrymaker</dryadToSpawn>
-			</li>
-		</comps>
-	</ThingDef>
-
-	<!-- Stonedigger -->
-
-	<ThingDef ParentName="VDE_DryadCocoon">
-		<defName>VDE_StonediggerAwakeningCocoon</defName>
-		<label>stonedigger awakening pod</label>
-		<description>An awakened dryad will emerge from this pod in one day.</description>
-		<graphicData>
-			<texPath>Things/Building/UpgradeStonedigger</texPath>
-		</graphicData>
-		<comps>
-			<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_SpawnAwakened">
-				<ticksToSpawn>60000</ticksToSpawn>
-				<dryadToSpawn>VDE_AwakenedDryad_Stonedigger</dryadToSpawn>
-			</li>
-		</comps>
-	</ThingDef>
-
-	<!-- Nectarmaker -->
-
-	<ThingDef ParentName="VDE_DryadCocoon">
-		<defName>VDE_NectarmakerAwakeningCocoon</defName>
-		<label>nectarmaker awakening pod</label>
-		<description>An awakened dryad will emerge from this pod in one day.</description>
-		<graphicData>
-			<texPath>Things/Building/UpgradeNectarmaker</texPath>
-		</graphicData>
-		<comps>
-			<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_SpawnAwakened">
-				<ticksToSpawn>60000</ticksToSpawn>
-				<dryadToSpawn>VDE_AwakenedDryad_Nectarmaker</dryadToSpawn>
-			</li>
-		</comps>
-	</ThingDef>
-
-	<!-- Spitter -->
-
-	<ThingDef ParentName="VDE_DryadCocoon">
-		<defName>VDE_SpitterAwakeningCocoon</defName>
-		<label>spitter awakening pod</label>
-		<description>An awakened dryad will emerge from this pod in one day.</description>
-		<graphicData>
-			<texPath>Things/Building/UpgradeSpitter</texPath>
-		</graphicData>
-		<comps>
-			<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_SpawnAwakened">
-				<ticksToSpawn>60000</ticksToSpawn>
-				<dryadToSpawn>VDE_AwakenedDryad_Spitter</dryadToSpawn>
-			</li>
-		</comps>
-	</ThingDef>
-
-	<!-- Gaubricmaker -->
-
-	<ThingDef ParentName="VDE_DryadCocoon">
-		<defName>VDE_GaubricmakerAwakeningCocoon</defName>
-		<label>gaubricmaker awakening pod</label>
-		<description>An awakened dryad will emerge from this pod in one day.</description>
-		<graphicData>
-			<texPath>Things/Building/UpgradeGaubricmaker</texPath>
-		</graphicData>
-		<comps>
-			<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_SpawnAwakened">
-				<ticksToSpawn>60000</ticksToSpawn>
-				<dryadToSpawn>VDE_AwakenedDryad_Gaubricmaker</dryadToSpawn>
-			</li>
-		</comps>
-	</ThingDef>
-
-	<!-- Agavemaker -->
-
-	<ThingDef ParentName="VDE_DryadCocoon">
-		<defName>VDE_AgavemakerAwakeningCocoon</defName>
-		<label>agavemaker awakening pod</label>
-		<description>An awakened dryad will emerge from this pod in one day.</description>
-		<graphicData>
-			<texPath>Things/Building/UpgradeAgavemaker</texPath>
-		</graphicData>
-		<comps>
-			<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_SpawnAwakened">
-				<ticksToSpawn>60000</ticksToSpawn>
-				<dryadToSpawn>VDE_AwakenedDryad_Agavemaker</dryadToSpawn>
-			</li>
-		</comps>
-	</ThingDef>
-
-	<!-- Voltaic -->
-
-	<ThingDef ParentName="VDE_DryadCocoon">
-		<defName>VDE_VoltaicAwakeningCocoon</defName>
-		<label>voltaic awakening pod</label>
-		<description>An awakened dryad will emerge from this pod in one day.</description>
-		<graphicData>
-			<texPath>Things/Building/UpgradeVoltaic</texPath>
-		</graphicData>
-		<comps>
-			<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_SpawnAwakened">
-				<ticksToSpawn>60000</ticksToSpawn>
-				<dryadToSpawn>VDE_AwakenedDryad_Voltaic</dryadToSpawn>
-			</li>
-		</comps>
-	</ThingDef>
-
-	<!-- Dryad Nest -->
-
-	<ThingDef ParentName="AnimalBedFurnitureBase">
+	
+	<ThingDef ParentName="BuildingBase">
 		<defName>VDE_DryadNest</defName>
+		<thingClass>Building_Bed</thingClass>
 		<label>dryad nest</label>
 		<description>A small nest of logs and twigs created by the awakened woodmaker dryad. Animals can sleep in it, but it can also be deconstructed for precious building materials.</description>
+		<rotatable>false</rotatable>
+		<fillPercent>0.15</fillPercent>
+		<pathCost>14</pathCost>
+		<passability>PassThroughOnly</passability>
+		<canOverlapZones>false</canOverlapZones>
 		<graphicData>
 			<texPath>Things/Building/DryadNest/DryadNestA</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
 			<drawSize>1.2</drawSize>
 		</graphicData>
+		<castEdgeShadows>true</castEdgeShadows>
 		<uiIconScale>0.80</uiIconScale>
 		<costList>
 			<WoodLog>75</WoodLog>
 		</costList>
 		<building>
+			<bed_humanlike>false</bed_humanlike>
+			<bed_showSleeperBody>true</bed_showSleeperBody>
+			<bed_healPerDay>4</bed_healPerDay>
+			<destroySound>BuildingDestroyed_Soft_Small</destroySound>
 			<artificialForMeditationPurposes>false</artificialForMeditationPurposes>
 		</building>
+		<altitudeLayer>Building</altitudeLayer>
 		<statBases>
 			<MaxHitPoints>140</MaxHitPoints>
 			<Flammability>1.0</Flammability>
@@ -252,13 +72,16 @@
 			<ImmunityGainSpeedFactor>1.07</ImmunityGainSpeedFactor>
 			<SurgerySuccessChanceFactor>1</SurgerySuccessChanceFactor>
 		</statBases>
-		<comps Inherit="False">
-			<li Class="VanillaIdeologyExpanded_Dryads.CompProperties_NotifyDestruction" />
+		<comps>
 			<li Class="CompProperties_AssignableToPawn">
-        <drawAssignmentOverlay>false</drawAssignmentOverlay>
-        <compClass>CompAssignableToPawn_Bed</compClass>
-      </li>
+				<drawAssignmentOverlay>false</drawAssignmentOverlay>
+				<compClass>CompAssignableToPawn_Bed</compClass>
+			</li>
 		</comps>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>BuildingsFurniture</li>
+		</thingCategories>
 	</ThingDef>
 
 </Defs>

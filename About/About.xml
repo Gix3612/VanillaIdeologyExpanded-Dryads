@@ -8,6 +8,12 @@
 		<li>1.5</li>
 	</supportedVersions>
 	<modIconPath IgnoreIfNoMatchingField="True">UI/VELogo</modIconPath>
+	<packageId>VanillaExpanded.Ideo.Dryads</packageId>
+	<description>Vanilla Ideology Expanded - Dryads is a mod expanding on the selection of gauranlen dryads in the Ideology DLC. Whilst the idea behind them fulfilling the majority of the roles in your colony is neat, the current selection of dryads feels lackluster - they don’t particularly have any powerful abilities worth mentioning.
+This mod changes that - from new dryad types that fill roles not explored before, to upgrades to existing dryads, the whole gauranlen dryad system can finally become a focus point of the colony.
+
+Integration with the Vanilla Ideology Expanded - Anima Theme also means that these new dryads get a reskin that suits Anima style if you have this mod active.
+This mod is meant to enhance Mr Samuel’s new Youtube series with some more dryad variety.</description>
 	<modDependencies>
 		<li>
 			<packageId>brrainz.harmony</packageId>
@@ -33,12 +39,4 @@
 		<li>brrainz.harmony</li>
 		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
 	</loadAfter>
-	<packageId>VanillaExpanded.Ideo.Dryads</packageId>
-	<description>
-Vanilla Ideology Expanded - Dryads is a mod expanding on the selection of gauranlen dryads in the Ideology DLC. Whilst the idea behind them fulfilling the majority of the roles in your colony is neat, the current selection of dryads feels lackluster - they don’t particularly have any powerful abilities worth mentioning.
-This mod changes that - from new dryad types that fill roles not explored before, to upgrades to existing dryads, the whole gauranlen dryad system can finally become a focus point of the colony.
-
-Integration with the Vanilla Ideology Expanded - Anima Theme also means that these new dryads get a reskin that suits Anima style if you have this mod active.
-This mod is meant to enhance Mr Samuel’s new Youtube series with some more dryad variety.
-	</description>
 </ModMetaData>

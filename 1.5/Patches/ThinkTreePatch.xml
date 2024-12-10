@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationInsert">
+		<xpath>/Defs/ThinkTreeDef[defName = "Dryad"]/thinkRoot/subNodes/li/subNodes/li[@Class="JobGiver_CreateAndEnterHealingPod"]</xpath>
+		<value>
+				<li Class="VanillaIdeologyExpanded_Dryads.JobGiver_MergeIntoAwakeningCocoon">
+					<leaveJoinableLordIfIssuesJob>true</leaveJoinableLordIfIssuesJob>
+				</li>
+		</value>
+	</Operation>
+	
+</Patch>
