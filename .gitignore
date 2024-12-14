@@ -1,2 +1,16 @@
+*
 
-desktop.ini
+!*/
+
+!.gitignore
+!/1.5/Assemblies/**
+!/1.5/Defs/**
+!/1.5/Patches/**
+!/1.5/Source/VanillaIdeologyExpanded Dryads/VanillaIdeologyExpanded Dryads/AI/**
+!/1.5/Source/VanillaIdeologyExpanded Dryads/VanillaIdeologyExpanded Dryads/Comps/**
+!/1.5/Source/VanillaIdeologyExpanded Dryads/VanillaIdeologyExpanded Dryads/
+!/1.5/Source/VanillaIdeologyExpanded Dryads/VanillaIdeologyExpanded Dryads/DefOf/**
+!/1.5/Source/VanillaIdeologyExpanded Dryads/VanillaIdeologyExpanded Dryads/HediffComps/**
+!/About/**
+!/Languages/**
+!/Textures/**
