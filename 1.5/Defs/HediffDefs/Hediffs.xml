@@ -117,16 +117,15 @@
 	
 	<HediffDef>
 		<defName>VDE_NoPain</defName>
+		<label>reduced pain sensitivity</label>
 		<description>This animal has a reduced pain sensitivity, and it takes longer to be downed due to pain.</description>
-		<label>no pain sensitivity</label>
-		<defaultLabelColor>(.8,0,0)</defaultLabelColor>
+    <isBad>false</isBad>
 		<scenarioCanAdd>false</scenarioCanAdd>
-		<maxSeverity>1.0</maxSeverity>
 		<stages>
 			<li>
-				<painFactor>0.01</painFactor>
+        <minSeverity>0</minSeverity>
 				<statOffsets>
-					<PainShockThreshold>1</PainShockThreshold>
+					<PainShockThreshold>10</PainShockThreshold>
 				</statOffsets>
 			</li>
 		</stages>

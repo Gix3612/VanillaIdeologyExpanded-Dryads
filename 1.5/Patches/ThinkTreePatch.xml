@@ -1,12 +1,46 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
+	<!-- Awakening job giver -->
+	
 	<Operation Class="PatchOperationInsert">
 		<xpath>/Defs/ThinkTreeDef[defName = "Dryad"]/thinkRoot/subNodes/li/subNodes/li[@Class="JobGiver_CreateAndEnterHealingPod"]</xpath>
 		<value>
-				<li Class="VanillaIdeologyExpanded_Dryads.JobGiver_MergeIntoAwakeningCocoon">
-					<leaveJoinableLordIfIssuesJob>true</leaveJoinableLordIfIssuesJob>
-				</li>
+			<li Class="VanillaIdeologyExpanded_Dryads.JobGiver_MergeIntoAwakeningCocoon">
+				<leaveJoinableLordIfIssuesJob>true</leaveJoinableLordIfIssuesJob>
+			</li>
+		</value>
+	</Operation>
+
+	<!-- Make spitters more aggressive so they target at range -->
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThinkTreeDef[defName = "Dryad"]/thinkRoot/subNodes/li[@Class="JobGiver_ReactToCloseMeleeThreat"]</xpath>
+		<value>
+			<!-- Spitter React to threat -->
+			<li Class="ThinkNode_ConditionalPawnKind">
+				<pawnKind>VDE_Dryad_Spitter</pawnKind>
+				<subNodes>
+					<li Class="JobGiver_FleeForDistance">
+						<enemyDistToFleeRange>2.9~7.9</enemyDistToFleeRange>
+						<fleeDistRange>13.5~20</fleeDistRange>
+					</li>
+					<li Class="JobGiver_ReactToCloseMeleeThreat">
+						<maxDistance>19.9</maxDistance>
+					</li>
+					<li Class="JobGiver_AIAbilityFight">
+						<targetAcquireRadius>35</targetAcquireRadius>
+						<targetKeepRadius>42</targetKeepRadius>
+						<skipIfCantTargetNow>false</skipIfCantTargetNow>
+						<ability>VDE_Dryad_Spit</ability>
+						<allowTurrets>true</allowTurrets>
+						<needLOSToAcquireNonPawnTargets>true</needLOSToAcquireNonPawnTargets>
+					</li>
+				</subNodes>
+			</li>
+				
+			<!-- React to close melee threat -->
+			<li Class="JobGiver_ReactToCloseMeleeThreat"/>
 		</value>
 	</Operation>
 	

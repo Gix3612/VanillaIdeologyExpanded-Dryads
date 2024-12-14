@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
+
 <Defs>
+
 	<ThinkTreeDef>
 		<defName>VDE_AwakenedDryad</defName>
 		<thinkRoot Class="ThinkNode_Priority">
-		
 			<subNodes>
 
 				<!-- Keep lying down if we have to -->
-
 				<li Class="ThinkNode_ConditionalMustKeepLyingDown">
 					<subNodes>
 
@@ -37,16 +37,35 @@
 				</li>
 				<li Class="JobGiver_FightFiresNearConnectedTree"/>
 
+				<!-- Spitter React to threat -->
+				<li Class="ThinkNode_ConditionalPawnKind">
+					<pawnKind>VDE_Dryad_Spitter_Awakened</pawnKind>
+					<subNodes>
+						<li Class="JobGiver_FleeForDistance">
+							<enemyDistToFleeRange>2.9~7.9</enemyDistToFleeRange>
+							<fleeDistRange>13.5~20</fleeDistRange>
+						</li>
+						<li Class="JobGiver_ReactToCloseMeleeThreat">
+							<maxDistance>19.9</maxDistance>
+						</li>
+						<li Class="JobGiver_AIAbilityFight">
+							<targetAcquireRadius>35</targetAcquireRadius>
+							<targetKeepRadius>42</targetKeepRadius>
+							<skipIfCantTargetNow>false</skipIfCantTargetNow>
+							<ability>VDE_Dryad_Spit</ability>
+							<allowTurrets>true</allowTurrets>
+							<needLOSToAcquireNonPawnTargets>true</needLOSToAcquireNonPawnTargets>
+						</li>
+					</subNodes>
+				</li>
+				
 				<!-- React to close melee threat -->
-
 				<li Class="JobGiver_ReactToCloseMeleeThreat"/>
-
+			
 				<!-- Do a queued job -->
-
 				<li Class="ThinkNode_QueuedJob"/>
 
 				<!-- If not player controlled, leave the map -->
-
 				<li Class="ThinkNode_ConditionalOfPlayerFaction">
 					<invert>true</invert>
 					<subNodes>
@@ -61,7 +80,6 @@
 				</li>
 
 				<!-- Forced goto -->
-
 				<li Class="ThinkNode_ConditionalForcedGoto">
 					<subNodes>
 						<li Class="ThinkNode_Tagger">
@@ -74,13 +92,11 @@
 				</li>
 
 				<!-- Behavior when roped -->
-
 				<li Class="ThinkNode_Subtree">
 					<treeDef>RopedPawn</treeDef>
 				</li>
 
 				<!-- Wait if drafted -->
-
 				<li Class="ThinkNode_ConditionalOfPlayerFaction">
 					<subNodes>
 						<li Class="ThinkNode_Tagger">
@@ -94,17 +110,19 @@
 				</li>
 
 				<!-- Lord directives -->
-
 				<li Class="ThinkNode_Subtree">
 					<treeDef>LordDuty</treeDef>
 				</li>
 
-				<!-- Lay eggs you need to -->
+				<!-- Insertion hook for modders -->
+				<li Class="ThinkNode_SubtreesByTag">
+					<insertTag>AwakenedDryad_PreMain</insertTag>
+				</li>
 
+				<!-- Lay eggs you need to -->
 				<li Class="JobGiver_LayEgg"/>
 
 				<!-- Primary faction actions -->
-
 				<li Class="ThinkNode_ConditionalOfPlayerFaction">
 					<subNodes>
 						<li Class="ThinkNode_Tagger">
@@ -145,7 +163,6 @@
 				</li>
 
 				<!-- Eat random things out of curiosity -->
-
 				<li Class="ThinkNode_ChancePerHour_Constant">
 					<mtbDays>60</mtbDays>
 					<subNodes>
@@ -159,13 +176,11 @@
 				</li>
 
 				<!-- Satisfy basic needs -->
-
 				<li Class="ThinkNode_Subtree">
 					<treeDef>SatisfyBasicNeeds</treeDef>
 				</li>
 
 				<!-- Secondary faction actions -->
-
 				<li Class="ThinkNode_ConditionalOfPlayerFaction">
 					<subNodes>
 
@@ -239,14 +254,17 @@
 					</subNodes>
 				</li>
 
-				<!-- Wander near colony if possible -->
-
+				<!-- Insertion hook for modders -->
+				<li Class="ThinkNode_SubtreesByTag">
+					<insertTag>AwakenedDryad_PreWander</insertTag>
+				</li>
+        
+				<!-- Idle -->
 				<li Class="ThinkNode_Tagger">
 					<tagToGive>Idle</tagToGive>
 					<subNodes>
 
 						<!-- Wander near your current position if in hostile map -->
-
 						<li Class="ThinkNode_ConditionalAnyEnemyInHostileMap">
 							<subNodes>
 								<li Class="JobGiver_WanderAnywhere">
@@ -256,39 +274,27 @@
 							</subNodes>
 						</li>
 
-						<!-- Wander near colony -->
-
-						<li Class="JobGiver_WanderColony">
-							<maxDanger>None</maxDanger>
+						<li Class="JobGiver_WanderHerd">
+							<maxDanger>Deadly</maxDanger>
 							<ticksBetweenWandersRange>120~240</ticksBetweenWandersRange>
 						</li>
-
-					</subNodes>
-				</li>
-
-				<!-- Wander -->
-
-				<li Class="ThinkNode_Tagger">
-					<tagToGive>Idle</tagToGive>
-					<subNodes>
-						<li Class="ThinkNode_ConditionalHerdAnimal">
-							<subNodes>
-								<li Class="JobGiver_WanderHerd">
-									<maxDanger>Deadly</maxDanger>
-									<ticksBetweenWandersRange>120~240</ticksBetweenWandersRange>
-								</li>
-							</subNodes>
+						
+						<!-- Wander near colony -->
+						<li Class="JobGiver_WanderColony">
+							<maxDanger>Deadly</maxDanger>
+							<ticksBetweenWandersRange>120~240</ticksBetweenWandersRange>
 						</li>
 						<li Class="JobGiver_WanderAnywhere">
 							<maxDanger>Deadly</maxDanger>
 							<ticksBetweenWandersRange>120~240</ticksBetweenWandersRange>
 						</li>
+								
 					</subNodes>
 				</li>
+
 				<li Class="JobGiver_IdleError"/>
-
 			</subNodes>
-
 		</thinkRoot>
 	</ThinkTreeDef>
+	
 </Defs>

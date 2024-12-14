@@ -1,159 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<!-- Stonedigger -->
-
-	<ThingDef ParentName="DryadBase">
-		<defName>VDE_Dryad_Stonedigger</defName>
-		<label>stonedigger dryad</label>
-		<description>An extremely easy-going caste of dryad which specializes in finding stone chunks. Absorbs minerals from the ground that help harden its carapace while leaving excessively large pieces aside. However, it is slow and ineffective at work or combat.\n\nIn general, dryads are mammal-like creatures that have a symbiotic relationship with the Gauranlen tree. They reproduce together with their tree, which contains a hidden dryad queen. Dryads can morph into various specialized castes.</description>
-		<statBases>
-			<MoveSpeed>2.24</MoveSpeed>
-			<ArmorRating_Blunt>0.75</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.85</ArmorRating_Sharp>
-		</statBases>
-		<comps>
-			<li Class="AnimalBehaviours.CompProperties_DigPeriodically">
-				<customThingToDig>
-					
-				</customThingToDig>
-				<customAmountToDig>
-					
-				</customAmountToDig>
-				<ticksToDig>60000</ticksToDig>
-				<onlyWhenTamed>true</onlyWhenTamed>
-				<digBiomeRocks>true</digBiomeRocks>
-			</li>
-		</comps>
-		<race>
-			<useMeatFrom>Dryad_Basic</useMeatFrom>
-			<lifeStageAges>
-				<li>
-					<def>AnimalAdult</def>
-					<soundWounded>Pawn_Dryad_Barkskin_Wounded</soundWounded>
-					<soundCall>Pawn_Dryad_Barkskin_Call</soundCall>
-				</li>
-			</lifeStageAges>
-		</race>
-	</ThingDef>
-
-	<PawnKindDef ParentName="DryadKindBase">
-		<defName>VDE_Dryad_Stonedigger</defName>
-		<label>stonedigger dryad</label>
-		<race>VDE_Dryad_Stonedigger</race>
-		<lifeStages>
-			<li>
-				<bodyGraphicData>
-					<texPath>Things/Pawn/Animal/DryadStonedigger/DryadStonedigger</texPath>
-					<drawSize>1.5</drawSize>
-				</bodyGraphicData>
-				<dessicatedBodyGraphicData>
-					<texPath>Things/Pawn/Animal/DryadStonedigger/Dessicated_DryadStonedigger</texPath>
-					<drawSize>1.5</drawSize>
-				</dessicatedBodyGraphicData>
-			</li>
-		</lifeStages>
-	</PawnKindDef>
-
-	<!-- Spitter -->
-
-	<ThingDef ParentName="DryadBase">
-		<defName>VDE_Dryad_Spitter</defName>
-		<label>spitter dryad</label>
-		<description>A dryad caste specialized in territorialism and can launch ranged acid projectiles. Though it can dish out tremendous damage, it is vulnerable in melee due to its oversized mouth.\n\nIn general, dryads are mammal-like creatures that have a symbiotic relationship with the Gauranlen tree. They reproduce together with their tree, which contains a hidden dryad queen. Dryads can morph into various specialized castes.</description>
-		<statBases>
-			<MoveSpeed>3</MoveSpeed>
-		</statBases>
-		<verbs>
-			<li>
-				<verbClass>Verb_Shoot</verbClass>
-				<accuracyTouch>1</accuracyTouch>
-				<accuracyShort>.8</accuracyShort>
-				<accuracyMedium>.75</accuracyMedium>
-				<accuracyLong>.5</accuracyLong>
-				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>VDE_AcidBolt</defaultProjectile>
-				<warmupTime>2.2</warmupTime>
-				<burstShotCount>1</burstShotCount>
-				<minRange>2</minRange>
-				<range>19.9</range>
-				<soundCast>VDE_AcidBolt</soundCast>
-				<muzzleFlashScale>0</muzzleFlashScale>
-				<label>acidic spit</label>
-				<commonality>.8</commonality>
-			</li>
-		</verbs>
-		<race>
-			<body>Snake</body>
-			<useMeatFrom>Dryad_Basic</useMeatFrom>
-			<lifeStageAges>
-				<li>
-					<def>AnimalAdult</def>
-					<soundWounded>Pawn_Dryad_Clawer_Wounded</soundWounded>
-					<soundCall>Pawn_Dryad_Clawer_Call</soundCall>
-				</li>
-			</lifeStageAges>
-			<baseHealthScale>0.6</baseHealthScale>
-			<trainability>Intermediate</trainability>
-			<trainableTags>
-				<li>Basic</li>
-				<li>Combat</li>
-			</trainableTags>
-			<untrainableTags>
-				<li>Work</li>
-				<li>Help</li>
-			</untrainableTags>
-		</race>
-		<tools Inherit="False">
-			<li>
-				<label>venom-fangs</label>
-				<capacities>
-					<li>ToxicBite</li>
-				</capacities>
-				<power>9</power>
-				<cooldownTime>2</cooldownTime>
-				<linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
-				<surpriseAttack>
-					<extraMeleeDamages>
-						<li>
-							<def>Stun</def>
-							<amount>14</amount>
-						</li>
-					</extraMeleeDamages>
-				</surpriseAttack>
-			</li>
-			<li>
-				<label>head</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>4</power>
-				<cooldownTime>2</cooldownTime>
-				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-				<chanceFactor>0.2</chanceFactor>
-			</li>
-		</tools>
-	</ThingDef>
-
-	<PawnKindDef ParentName="DryadKindBase">
-		<defName>VDE_Dryad_Spitter</defName>
-		<label>spitter dryad</label>
-		<race>VDE_Dryad_Spitter</race>
-		<lifeStages>
-			<li>
-				<bodyGraphicData>
-					<texPath>Things/Pawn/Animal/DryadSpitter/DryadSpitter</texPath>
-					<drawSize>1.5</drawSize>
-				</bodyGraphicData>
-				<dessicatedBodyGraphicData>
-					<texPath>Things/Pawn/Animal/DryadSpitter/Dessicated_DryadSpitter</texPath>
-					<drawSize>1.5</drawSize>
-				</dessicatedBodyGraphicData>
-			</li>
-		</lifeStages>
-	</PawnKindDef>
-
 	<!-- Gaubricmaker -->
 
 	<ThingDef ParentName="DryadBase">
@@ -250,6 +97,142 @@
 		</lifeStages>
 	</PawnKindDef>
 
+	<!-- Spitter -->
+
+	<ThingDef ParentName="DryadBase">
+		<defName>VDE_Dryad_Spitter</defName>
+		<label>spitter dryad</label>
+		<description>A dryad caste specialized in territorialism and can launch ranged acid projectiles. Though it can dish out tremendous damage, it is vulnerable in melee due to its oversized mouth.\n\nIn general, dryads are mammal-like creatures that have a symbiotic relationship with the Gauranlen tree. They reproduce together with their tree, which contains a hidden dryad queen. Dryads can morph into various specialized castes.</description>
+		<statBases>
+			<MoveSpeed>3.2</MoveSpeed>
+		</statBases>
+		<race>
+			<body>Snake</body>
+			<useMeatFrom>Dryad_Basic</useMeatFrom>
+			<lifeStageAges>
+				<li>
+					<def>AnimalAdult</def>
+					<soundWounded>Pawn_Dryad_Clawer_Wounded</soundWounded>
+					<soundCall>Pawn_Dryad_Clawer_Call</soundCall>
+				</li>
+			</lifeStageAges>
+      <overrideShouldHaveAbilityTracker>true</overrideShouldHaveAbilityTracker>			<baseHealthScale>0.6</baseHealthScale>
+			<trainability>Intermediate</trainability>
+			<trainableTags>
+				<li>Basic</li>
+				<li>Combat</li>
+			</trainableTags>
+			<untrainableTags>
+				<li>Work</li>
+				<li>Help</li>
+			</untrainableTags>
+		</race>
+		<tools Inherit="False">
+			<li>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>14</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>4</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+	</ThingDef>
+
+	<PawnKindDef ParentName="DryadKindBase">
+		<defName>VDE_Dryad_Spitter</defName>
+		<label>spitter dryad</label>
+		<race>VDE_Dryad_Spitter</race>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/DryadSpitter/DryadSpitter</texPath>
+					<drawSize>1.5</drawSize>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/DryadSpitter/Dessicated_DryadSpitter</texPath>
+					<drawSize>1.5</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<abilities>
+			<li>VDE_Dryad_Spit</li>
+		</abilities>
+	</PawnKindDef>
+
+	<!-- Stonedigger -->
+
+	<ThingDef ParentName="DryadBase">
+		<defName>VDE_Dryad_Stonedigger</defName>
+		<label>stonedigger dryad</label>
+		<description>An extremely easy-going caste of dryad which specializes in finding stone chunks. Absorbs minerals from the ground that help harden its carapace while leaving excessively large pieces aside. However, it is slow and ineffective at work or combat.\n\nIn general, dryads are mammal-like creatures that have a symbiotic relationship with the Gauranlen tree. They reproduce together with their tree, which contains a hidden dryad queen. Dryads can morph into various specialized castes.</description>
+		<statBases>
+			<MoveSpeed>2.24</MoveSpeed>
+			<ArmorRating_Blunt>0.75</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.85</ArmorRating_Sharp>
+		</statBases>
+		<comps>
+			<li Class="AnimalBehaviours.CompProperties_DigPeriodically">
+				<customThingToDig>
+					
+				</customThingToDig>
+				<customAmountToDig>
+					
+				</customAmountToDig>
+				<ticksToDig>60000</ticksToDig>
+				<onlyWhenTamed>true</onlyWhenTamed>
+				<digBiomeRocks>true</digBiomeRocks>
+			</li>
+		</comps>
+		<race>
+			<useMeatFrom>Dryad_Basic</useMeatFrom>
+			<lifeStageAges>
+				<li>
+					<def>AnimalAdult</def>
+					<soundWounded>Pawn_Dryad_Barkskin_Wounded</soundWounded>
+					<soundCall>Pawn_Dryad_Barkskin_Call</soundCall>
+				</li>
+			</lifeStageAges>
+		</race>
+	</ThingDef>
+
+	<PawnKindDef ParentName="DryadKindBase">
+		<defName>VDE_Dryad_Stonedigger</defName>
+		<label>stonedigger dryad</label>
+		<race>VDE_Dryad_Stonedigger</race>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/DryadStonedigger/DryadStonedigger</texPath>
+					<drawSize>1.5</drawSize>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/DryadStonedigger/Dessicated_DryadStonedigger</texPath>
+					<drawSize>1.5</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
 	<!-- Agavemaker -->
 
 	<ThingDef ParentName="DryadBase">
@@ -280,12 +263,12 @@
 					<soundCall>Pawn_Dryad_Berrymaker_Call</soundCall>
 				</li>
 			</lifeStageAges>
-			<headPosPerRotation>
-				<li>(0.0, 0, 0.1)</li>
-				<li>(0.15, 0, 0.02)</li>
-				<li>(0, 0, -0.08)</li>
-				<li>(-0.15, 0, 0.02)</li>
-			</headPosPerRotation>
+			<!-- <headPosPerRotation> -->
+				<!-- <li>(0.0, 0, 0.1)</li> -->
+				<!-- <li>(0.15, 0, 0.02)</li> -->
+				<!-- <li>(0, 0, -0.08)</li> -->
+				<!-- <li>(-0.15, 0, 0.02)</li> -->
+			<!-- </headPosPerRotation> -->
 		</race>
 	</ThingDef>
 
@@ -314,7 +297,7 @@
 		<label>voltaic dryad</label>
 		<description>A dryad caste that naturally generates electricity. Together with its Gauranlen tree, this dryad can charge batteries and its attacks cause electromagnetic disruptions.\n\nIn general, dryads are mammal-like creatures that have a symbiotic relationship with the Gauranlen tree. They reproduce together with their tree, which contains a hidden dryad queen. Dryads can morph into various specialized castes.</description>
 		<statBases>
-			<MoveSpeed>3</MoveSpeed>
+			<MoveSpeed>3.4</MoveSpeed>
 		</statBases>
 		<race>
 			<useMeatFrom>Dryad_Basic</useMeatFrom>
@@ -334,12 +317,12 @@
 				<li>Work</li>
 				<li>Help</li>
 			</untrainableTags>
-			<headPosPerRotation>
-				<li>(0.0, 0, 0.1)</li>
-				<li>(0.15, 0, 0.02)</li>
-				<li>(0, 0, -0.08)</li>
-				<li>(-0.15, 0, 0.02)</li>
-			</headPosPerRotation>
+			<!-- <headPosPerRotation> -->
+				<!-- <li>(0.0, 0, 0.1)</li> -->
+				<!-- <li>(0.15, 0, 0.02)</li> -->
+				<!-- <li>(0, 0, -0.08)</li> -->
+				<!-- <li>(-0.15, 0, 0.02)</li> -->
+			<!-- </headPosPerRotation> -->
 		</race>
 		<tools Inherit="False">
 			<li>
@@ -475,6 +458,9 @@
 				</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
+		<abilities>
+			<li>VDE_Dryad_Lightning</li>
+		</abilities>
 	</PawnKindDef>
 
 </Defs>
