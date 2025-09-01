@@ -9,9 +9,10 @@
 			<MoveSpeed>2.24</MoveSpeed>
 			<ArmorRating_Blunt>0.75</ArmorRating_Blunt>
 			<ArmorRating_Sharp>0.85</ArmorRating_Sharp>
+			
 		</statBases>
 		<comps>
-			<li Class="AnimalBehaviours.CompProperties_DigPeriodically">
+			<li Class="VEF.AnimalBehaviours.CompProperties_DigPeriodically">
 				<customThingToDig>			
 					
 				</customThingToDig>
@@ -153,7 +154,7 @@
 			<MoveSpeed>3</MoveSpeed>
 		</statBases>
 		<comps>
-			<li Class="AnimalBehaviours.CompProperties_AnimalProduct">
+			<li Class="VEF.AnimalBehaviours.CompProperties_AnimalProduct">
 				<resourceDef>VDE_Gaubric</resourceDef>
 				<gatheringIntervalDays>10</gatheringIntervalDays>
 				<resourceAmount>45</resourceAmount>

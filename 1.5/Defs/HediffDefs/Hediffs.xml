@@ -1,10 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
 	<HediffDef ParentName="DiseaseBase">
 		<defName>VDE_SeparationSickness</defName>
 		<label>separation sickness</label>
-		<description>When an awakened dryad reaches 2 years of age, they start getting affected by separation sickness. This sickness is progressive and always lethal. It is caused by the dryad losing its connection to the Gauranlen tree, and not being able to restore it due to being unshackled.\n\nSeparation sickness can be slowed down by medicine, but eventually every awakened dryad dies.</description>
+		<description>When an awakened dryad reaches 2 years of age, they start getting affected by separation sickness. This sickness is progressive and always lethal. It is caused by the dryad losing its connection to the Gauranlen tree, and not being able to restore it due to being unshackled.\n\nSeparation sickness can be slowed down by medicine, but eventually every Awakened dryad dies.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<lethalSeverity>1</lethalSeverity>
 		<makesSickThought>true</makesSickThought>
@@ -114,21 +113,20 @@
 			</li>
 		</comps>
 	</HediffDef>
-	
 	<HediffDef>
 		<defName>VDE_NoPain</defName>
-		<label>reduced pain sensitivity</label>
 		<description>This animal has a reduced pain sensitivity, and it takes longer to be downed due to pain.</description>
-    <isBad>false</isBad>
+		<label>no pain sensitivity</label>
+		<defaultLabelColor>(.8,0,0)</defaultLabelColor>
 		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
 		<stages>
 			<li>
-        <minSeverity>0</minSeverity>
+				<painFactor>0.01</painFactor>
 				<statOffsets>
-					<PainShockThreshold>10</PainShockThreshold>
+					<PainShockThreshold>1</PainShockThreshold>
 				</statOffsets>
 			</li>
 		</stages>
 	</HediffDef>
-	
 </Defs>

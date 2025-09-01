@@ -1,8 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
 	<!--=============== Pure stuffs: Fabric, leather, etc  ====================-->
-
 	<ThingDef ParentName="ResourceBase">
 		<defName>VDE_Gaubric</defName>
 		<label>gaubric</label>
@@ -44,5 +42,4 @@
 		</thingCategories>
 		<allowedArchonexusCount>80</allowedArchonexusCount>
 	</ThingDef>
-
 </Defs>

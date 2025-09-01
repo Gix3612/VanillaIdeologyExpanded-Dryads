@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
-	<!-- Stonedigger -->
-	
 	<GauranlenTreeModeDef>
 		<defName>VDE_Stonedigger</defName>
 		<label>stonedigger</label>
@@ -15,13 +12,8 @@
 		</displayedStats>
 		<hyperlinks>
 			<ThingDef>VDE_Dryad_Stonedigger</ThingDef>
-			<ThingDef>ChunkSandstone</ThingDef>
-			<ThingDef>VDE_Dryad_Stonedigger_Awakened</ThingDef>
 		</hyperlinks>
 	</GauranlenTreeModeDef>
-
-	<!-- Spitter -->
-
 	<GauranlenTreeModeDef>
 		<defName>VDE_Spitter</defName>
 		<label>spitter</label>
@@ -36,12 +28,8 @@
 		</displayedStats>
 		<hyperlinks>
 			<ThingDef>VDE_Dryad_Spitter</ThingDef>
-			<ThingDef>VDE_Dryad_Spitter_Awakened</ThingDef>
 		</hyperlinks>
 	</GauranlenTreeModeDef>
-
-	<!-- Gaubricmaker -->
-
 	<GauranlenTreeModeDef>
 		<defName>VDE_Gaubricmaker</defName>
 		<label>gaubricmaker</label>
@@ -54,13 +42,8 @@
 		</displayedStats>
 		<hyperlinks>
 			<ThingDef>VDE_Dryad_Gaubricmaker</ThingDef>
-			<ThingDef>VDE_Gaubric</ThingDef>
-			<ThingDef>VDE_Dryad_Gaubricmaker_Awakened</ThingDef>
 		</hyperlinks>
 	</GauranlenTreeModeDef>
-
-	<!-- Nectarmaker -->
-
 	<GauranlenTreeModeDef>
 		<defName>VDE_Nectarmaker</defName>
 		<label>nectarmaker</label>
@@ -73,46 +56,6 @@
 		</displayedStats>
 		<hyperlinks>
 			<ThingDef>VDE_Dryad_Nectarmaker</ThingDef>
-			<ThingDef>Ambrosia</ThingDef>
-			<ThingDef>VDE_Dryad_Nectarmaker_Awakened</ThingDef>
 		</hyperlinks>
 	</GauranlenTreeModeDef>
-
-	<!-- Agavemaker -->
-
-	<GauranlenTreeModeDef>
-		<defName>VDE_Agavemaker</defName>
-		<label>agavemaker</label>
-		<description>A dryad caste specialized in food production. Together with its Gauranlen tree, this dryad can generate nourishing agave on an ongoing basis. However, it is slow and ineffective at work or combat.</description>
-		<drawPosition>(0.833, 0.666)</drawPosition>
-		<pawnKindDef>VDE_Dryad_Agavemaker</pawnKindDef>
-		<displayedStats>
-			<li>MaxHitPoints</li>
-			<li>MoveSpeed</li>
-		</displayedStats>
-		<hyperlinks>
-			<ThingDef>VDE_Dryad_Agavemaker</ThingDef>
-			<ThingDef>RawAgave</ThingDef>
-			<ThingDef>VDE_Dryad_Agavemaker_Awakened</ThingDef>
-		</hyperlinks>
-	</GauranlenTreeModeDef>
-
-	<!-- Voltaic -->
-
-	<GauranlenTreeModeDef>
-		<defName>VDE_Voltaic</defName>
-		<label>voltaic</label>
-		<description>A dryad caste that naturally generates electricity. Together with its Gauranlen tree, this dryad can charge batteries and its attacks cause electromagnetic disruptions.</description>
-		<drawPosition>(0.833, 0.833)</drawPosition>
-		<pawnKindDef>VDE_Dryad_Voltaic</pawnKindDef>
-		<displayedStats>
-			<li>MaxHitPoints</li>
-			<li>MoveSpeed</li>
-		</displayedStats>
-		<hyperlinks>
-			<ThingDef>VDE_Dryad_Voltaic</ThingDef>
-			<ThingDef>VDE_Dryad_Voltaic_Awakened</ThingDef>
-		</hyperlinks>
-	</GauranlenTreeModeDef>
-
 </Defs>

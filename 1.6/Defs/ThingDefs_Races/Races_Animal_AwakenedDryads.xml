@@ -12,9 +12,10 @@
 			<ComfyTemperatureMin>-50</ComfyTemperatureMin>
 			<ComfyTemperatureMax>50</ComfyTemperatureMax>
 			<FilthRate>1</FilthRate>
+			<Wildness>0.5</Wildness>
 		</statBases>
 		<comps>
-			<li Class="AnimalBehaviours.CompProperties_DiseasesAfterPeriod">
+			<li Class="VEF.AnimalBehaviours.CompProperties_DiseasesAfterPeriod">
 				<timeToApplyInTicks>7200000</timeToApplyInTicks>
 				<hediffsToApply>
 					<li>VDE_SeparationSickness</li>
@@ -36,7 +37,6 @@
 			<useLeatherFrom>Dryad_Basic</useLeatherFrom>
 			<mateMtbHours>100000</mateMtbHours>
 			<herdMigrationAllowed>false</herdMigrationAllowed>
-			<wildness>0.5</wildness>
 			<petness>0</petness>
 			<trainability>Advanced</trainability>
 			<packAnimal>true</packAnimal>
@@ -158,14 +158,15 @@
 			<ComfyTemperatureMin>-50</ComfyTemperatureMin>
 			<ComfyTemperatureMax>50</ComfyTemperatureMax>
 			<FilthRate>1</FilthRate>
+			<Wildness>0.5</Wildness>
 		</statBases>
 		<comps>
-			<li Class="AnimalBehaviours.CompProperties_Floating">
+			<li Class="VEF.AnimalBehaviours.CompProperties_Floating">
 			</li>
-			<li Class="AnimalBehaviours.CompProperties_Draftable">
+			<li Class="VEF.AnimalBehaviours.CompProperties_Draftable">
 				<makeNonFleeingToo>true</makeNonFleeingToo>
 			</li>
-			<li Class="AnimalBehaviours.CompProperties_DiseasesAfterPeriod">
+			<li Class="VEF.AnimalBehaviours.CompProperties_DiseasesAfterPeriod">
 				<timeToApplyInTicks>7200000</timeToApplyInTicks>
 				<hediffsToApply>
 					<li>VDE_SeparationSickness</li>
@@ -187,7 +188,6 @@
 			<useLeatherFrom>Dryad_Basic</useLeatherFrom>
 			<mateMtbHours>100000</mateMtbHours>
 			<herdMigrationAllowed>false</herdMigrationAllowed>
-			<wildness>0.5</wildness>
 			<petness>0</petness>
 			<trainability>Intermediate</trainability>
 			<lifeExpectancy>2</lifeExpectancy>
@@ -312,20 +312,21 @@
 			<ComfyTemperatureMin>-50</ComfyTemperatureMin>
 			<ComfyTemperatureMax>50</ComfyTemperatureMax>
 			<FilthRate>1</FilthRate>
+			<Wildness>0.5</Wildness>
 		</statBases>
 		<comps>
-			<li Class="AnimalBehaviours.CompProperties_DiseasesAfterPeriod">
+			<li Class="VEF.AnimalBehaviours.CompProperties_DiseasesAfterPeriod">
 				<timeToApplyInTicks>7200000</timeToApplyInTicks>
 				<hediffsToApply>
 					<li>VDE_SeparationSickness</li>
 				</hediffsToApply>
 				<percentageOfMaxToReapply>0.95</percentageOfMaxToReapply>
 			</li>
-			<li Class="AnimalBehaviours.CompProperties_InitialHediff">
+			<li Class="VEF.AnimalBehaviours.CompProperties_InitialHediff">
 				<hediffname>VDE_NoPain</hediffname>
 				<hediffseverity>1</hediffseverity>
 			</li>
-			<li Class="AnimalBehaviours.CompProperties_Draftable">
+			<li Class="VEF.AnimalBehaviours.CompProperties_Draftable">
 				<makeNonFleeingToo>true</makeNonFleeingToo>
 			</li>
 		</comps>
@@ -343,7 +344,6 @@
 			<useLeatherFrom>Dryad_Basic</useLeatherFrom>
 			<mateMtbHours>100000</mateMtbHours>
 			<herdMigrationAllowed>false</herdMigrationAllowed>
-			<wildness>0.5</wildness>
 			<petness>0</petness>
 			<trainability>Intermediate</trainability>
 			<lifeExpectancy>2</lifeExpectancy>
@@ -464,9 +464,10 @@
 			<ComfyTemperatureMin>-50</ComfyTemperatureMin>
 			<ComfyTemperatureMax>50</ComfyTemperatureMax>
 			<FilthRate>1</FilthRate>
+			<Wildness>0.5</Wildness>
 		</statBases>
 		<comps>
-			<li Class="AnimalBehaviours.CompProperties_DiseasesAfterPeriod">
+			<li Class="VEF.AnimalBehaviours.CompProperties_DiseasesAfterPeriod">
 				<timeToApplyInTicks>7200000</timeToApplyInTicks>
 				<hediffsToApply>
 					<li>VDE_SeparationSickness</li>
@@ -480,7 +481,7 @@
 				<writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
 				<showMessageIfOwned>true</showMessageIfOwned>
 			</li>
-			<li Class="AnimalBehaviours.CompProperties_BuildPeriodically">
+			<li Class="VEF.AnimalBehaviours.CompProperties_BuildPeriodically">
 				<defOfBuilding>VDE_DryadNest</defOfBuilding>
 				<ticksToBuild>60000</ticksToBuild>
 				<onlyOneExistingPerPawn>true</onlyOneExistingPerPawn>
@@ -501,7 +502,6 @@
 			<useLeatherFrom>Dryad_Basic</useLeatherFrom>
 			<mateMtbHours>100000</mateMtbHours>
 			<herdMigrationAllowed>false</herdMigrationAllowed>
-			<wildness>0.5</wildness>
 			<petness>0</petness>
 			<trainability>None</trainability>
 			<lifeExpectancy>2</lifeExpectancy>
@@ -622,9 +622,10 @@
 			<ComfyTemperatureMin>-50</ComfyTemperatureMin>
 			<ComfyTemperatureMax>50</ComfyTemperatureMax>
 			<FilthRate>1</FilthRate>
+			<Wildness>0.5</Wildness>
 		</statBases>
 		<comps>
-			<li Class="AnimalBehaviours.CompProperties_DiseasesAfterPeriod">
+			<li Class="VEF.AnimalBehaviours.CompProperties_DiseasesAfterPeriod">
 				<timeToApplyInTicks>7200000</timeToApplyInTicks>
 				<hediffsToApply>
 					<li>VDE_SeparationSickness</li>
@@ -638,7 +639,7 @@
 				<writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
 				<showMessageIfOwned>true</showMessageIfOwned>
 			</li>
-			<li Class="AnimalBehaviours.CompProperties_AnimalProduct">
+			<li Class="VEF.AnimalBehaviours.CompProperties_AnimalProduct">
 				<resourceDef>Neutroamine</resourceDef>
 				<gatheringIntervalDays>4</gatheringIntervalDays>
 				<resourceAmount>2</resourceAmount>
@@ -659,7 +660,6 @@
 			<useLeatherFrom>Dryad_Basic</useLeatherFrom>
 			<mateMtbHours>100000</mateMtbHours>
 			<herdMigrationAllowed>false</herdMigrationAllowed>
-			<wildness>0.5</wildness>
 			<petness>0</petness>
 			<trainability>None</trainability>
 			<lifeExpectancy>2</lifeExpectancy>
@@ -780,9 +780,10 @@
 			<ComfyTemperatureMin>-50</ComfyTemperatureMin>
 			<ComfyTemperatureMax>50</ComfyTemperatureMax>
 			<FilthRate>1</FilthRate>
+			<Wildness>0.5</Wildness>
 		</statBases>
 		<comps>
-			<li Class="AnimalBehaviours.CompProperties_DiseasesAfterPeriod">
+			<li Class="VEF.AnimalBehaviours.CompProperties_DiseasesAfterPeriod">
 				<timeToApplyInTicks>7200000</timeToApplyInTicks>
 				<hediffsToApply>
 					<li>VDE_SeparationSickness</li>
@@ -796,7 +797,7 @@
 				<writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
 				<showMessageIfOwned>true</showMessageIfOwned>
 			</li>
-			<li Class="AnimalBehaviours.CompProperties_BuildPeriodically">
+			<li Class="VEF.AnimalBehaviours.CompProperties_BuildPeriodically">
 				<defOfBuilding>Plant_Berry</defOfBuilding>
 				<ticksToBuild>60000</ticksToBuild>
 				<maxBuildingsPerMap>50</maxBuildingsPerMap>
@@ -841,7 +842,6 @@
 			<useLeatherFrom>Dryad_Basic</useLeatherFrom>
 			<mateMtbHours>100000</mateMtbHours>
 			<herdMigrationAllowed>false</herdMigrationAllowed>
-			<wildness>0.5</wildness>
 			<petness>0</petness>
 			<trainability>None</trainability>
 			<lifeExpectancy>2</lifeExpectancy>
@@ -962,16 +962,17 @@
 			<ComfyTemperatureMin>-50</ComfyTemperatureMin>
 			<ComfyTemperatureMax>50</ComfyTemperatureMax>
 			<FilthRate>1</FilthRate>
+			<Wildness>0.5</Wildness>
 		</statBases>
 		<comps>
-			<li Class="AnimalBehaviours.CompProperties_DiseasesAfterPeriod">
+			<li Class="VEF.AnimalBehaviours.CompProperties_DiseasesAfterPeriod">
 				<timeToApplyInTicks>7200000</timeToApplyInTicks>
 				<hediffsToApply>
 					<li>VDE_SeparationSickness</li>
 				</hediffsToApply>
 				<percentageOfMaxToReapply>0.95</percentageOfMaxToReapply>
 			</li>
-			<li Class="AnimalBehaviours.CompProperties_DigPeriodically">
+			<li Class="VEF.AnimalBehaviours.CompProperties_DigPeriodically">
 				<customThingToDig>			
 					
 				</customThingToDig>
@@ -999,7 +1000,6 @@
 			<useLeatherFrom>Dryad_Basic</useLeatherFrom>
 			<mateMtbHours>100000</mateMtbHours>
 			<herdMigrationAllowed>false</herdMigrationAllowed>
-			<wildness>0.5</wildness>
 			<petness>0</petness>
 			<trainability>None</trainability>
 			<lifeExpectancy>2</lifeExpectancy>
@@ -1120,9 +1120,10 @@
 			<ComfyTemperatureMin>-50</ComfyTemperatureMin>
 			<ComfyTemperatureMax>50</ComfyTemperatureMax>
 			<FilthRate>1</FilthRate>
+			<Wildness>0.5</Wildness>
 		</statBases>
 		<comps>
-			<li Class="AnimalBehaviours.CompProperties_DiseasesAfterPeriod">
+			<li Class="VEF.AnimalBehaviours.CompProperties_DiseasesAfterPeriod">
 				<timeToApplyInTicks>7200000</timeToApplyInTicks>
 				<hediffsToApply>
 					<li>VDE_SeparationSickness</li>
@@ -1136,7 +1137,7 @@
 				<writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
 				<showMessageIfOwned>true</showMessageIfOwned>
 			</li>
-			<li Class="AnimalBehaviours.CompProperties_DieAndChangeIntoOtherDef">
+			<li Class="VEF.AnimalBehaviours.CompProperties_DieAndChangeIntoOtherDef">
 				<needsDiggableTerrain>true</needsDiggableTerrain>
 				<gizmoImage>Things/Building/AmbrosiaPalm/AmbrosiaPalmA</gizmoImage>
 				<gizmoLabel>VDE_TurnIntoPalm</gizmoLabel>
@@ -1158,7 +1159,6 @@
 			<useLeatherFrom>Dryad_Basic</useLeatherFrom>
 			<mateMtbHours>100000</mateMtbHours>
 			<herdMigrationAllowed>false</herdMigrationAllowed>
-			<wildness>0.5</wildness>
 			<petness>0</petness>
 			<trainability>None</trainability>
 			<lifeExpectancy>2</lifeExpectancy>
@@ -1279,16 +1279,17 @@
 			<ComfyTemperatureMin>-50</ComfyTemperatureMin>
 			<ComfyTemperatureMax>50</ComfyTemperatureMax>
 			<FilthRate>1</FilthRate>
+			<Wildness>0.5</Wildness>
 		</statBases>
 		<comps>
-			<li Class="AnimalBehaviours.CompProperties_DiseasesAfterPeriod">
+			<li Class="VEF.AnimalBehaviours.CompProperties_DiseasesAfterPeriod">
 				<timeToApplyInTicks>7200000</timeToApplyInTicks>
 				<hediffsToApply>
 					<li>VDE_SeparationSickness</li>
 				</hediffsToApply>
 				<percentageOfMaxToReapply>0.95</percentageOfMaxToReapply>
 			</li>
-			<li Class="AnimalBehaviours.CompProperties_Draftable">
+			<li Class="VEF.AnimalBehaviours.CompProperties_Draftable">
 				<makeNonFleeingToo>true</makeNonFleeingToo>
 			</li>
 		</comps>
@@ -1329,7 +1330,6 @@
 			<useLeatherFrom>Dryad_Basic</useLeatherFrom>
 			<mateMtbHours>100000</mateMtbHours>
 			<herdMigrationAllowed>false</herdMigrationAllowed>
-			<wildness>0.5</wildness>
 			<petness>0</petness>
 			<trainability>Advanced</trainability>
 			<lifeExpectancy>2</lifeExpectancy>
@@ -1451,7 +1451,7 @@
 			<ComfyTemperatureMax>50</ComfyTemperatureMax>
 		</statBases>
 		<comps>
-			<li Class="AnimalBehaviours.CompProperties_DiseasesAfterPeriod">
+			<li Class="VEF.AnimalBehaviours.CompProperties_DiseasesAfterPeriod">
 				<timeToApplyInTicks>7200000</timeToApplyInTicks>
 				<hediffsToApply>
 					<li>VDE_SeparationSickness</li>
@@ -1481,7 +1481,6 @@
 			<useLeatherFrom>Dryad_Basic</useLeatherFrom>
 			<mateMtbHours>100000</mateMtbHours>
 			<herdMigrationAllowed>false</herdMigrationAllowed>
-			<wildness>0.5</wildness>
 			<petness>0</petness>
 			<trainability>None</trainability>
 			<lifeExpectancy>2</lifeExpectancy>

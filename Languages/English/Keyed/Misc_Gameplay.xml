@@ -11,9 +11,9 @@
 	<VDE_EnableAwakening>Enable dryad awakening</VDE_EnableAwakening>
 	<VDE_EnableAwakeningDesc>Turn three dryads of a type into an awakened version that is free from the trees. This new awakened dryad will act as a normal animal of the colony in most aspects.</VDE_EnableAwakeningDesc>
 	<VDE_TicksToSpawn>Awakens in {0}</VDE_TicksToSpawn>
-	<VDE_TurnIntoPalm>Evolve into ambrosia palm</VDE_TurnIntoPalm>
-	<VDE_TurnIntoPalmDesc>Evolves the dryad into an ambrosia palm that produces the drug periodically</VDE_TurnIntoPalmDesc>
 	<VDE_AwakeningDryad>Merging {0} into {TYPE_label}.</VDE_AwakeningDryad>
 	<VDE_ConnectionStrengthTooWeakForAwakeningCocoon>Connection strength too low to create an awakening cocoon.</VDE_ConnectionStrengthTooWeakForAwakeningCocoon>
+	<VDE_TurnIntoPalm>Evolve into ambrosia palm</VDE_TurnIntoPalm>
+	<VDE_TurnIntoPalmDesc>Evolves the dryad into an ambrosia palm that produces the drug periodically</VDE_TurnIntoPalmDesc>
 
 </LanguageData>

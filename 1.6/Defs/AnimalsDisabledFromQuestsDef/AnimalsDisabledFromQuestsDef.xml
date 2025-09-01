@@ -4,7 +4,7 @@
 
 
 
-	<AnimalBehaviours.AnimalsDisabledFromQuestsDef>
+	<VEF.AnimalBehaviours.AnimalsDisabledFromQuestsDef>
 		<defName>VDE_DisabledAnimalFromQuestsToggles</defName>
 		<disabledFromQuestsPawns>			
 			
@@ -20,7 +20,7 @@
 			<li>VDE_AwakenedDryad_Gaubricmaker</li>
 			
 		</disabledFromQuestsPawns>							
-	</AnimalBehaviours.AnimalsDisabledFromQuestsDef>
+	</VEF.AnimalBehaviours.AnimalsDisabledFromQuestsDef>
 
 
 
